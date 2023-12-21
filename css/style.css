@@ -1,0 +1,27 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.center-container {
+  width: 90%;
+  background: green;
+  margin: 0 auto; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem; }
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .hero-img-box {
+    width: 75%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/img/IMG20230518190350.webp); }

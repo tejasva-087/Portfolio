@@ -1,0 +1,12 @@
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &-img-box {
+    width: 75%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/img/IMG20230518190350.webp);
+  }
+}

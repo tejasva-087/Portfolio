@@ -32,3 +32,5 @@ inter:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 font-family: 'Inter', sans-serif;
+
+Hi everyone, I'm Tejasva! I love making cool games, playing with robots (AI/ML!), and building fancy websites. Every day in tech feels like a new adventure, and I'm always excited to learn and build something awesome.

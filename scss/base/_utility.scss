@@ -8,12 +8,16 @@
 }
 
 .margin-bottom-med-1 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 3rem;
 
   // 750
   @media (max-width: 46.875em) {
     margin-bottom: 1.4rem;
   }
+}
+
+.margin-bottom-big-1 {
+  margin-bottom: 4.2rem;
 }
 
 .list {
@@ -34,5 +38,5 @@
 }
 
 .icons {
-  font-size: 12.4rem;
+  font-size: 3.4rem;
 }

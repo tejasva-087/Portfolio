@@ -1,0 +1,21 @@
+.nav {
+  @extend %flex-center;
+  justify-content: space-between;
+  padding: 2.8rem 6.4rem;
+
+  &-wrapper {
+    z-index: 9999;
+    // position: fixed;
+    // top: 0;
+    width: 100%;
+  }
+  &-logo {
+    height: 5.2rem;
+  }
+
+  &-list {
+    @extend %list;
+    @extend %flex-center;
+    gap: 3.2rem;
+  }
+}

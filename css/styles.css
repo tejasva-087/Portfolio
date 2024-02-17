@@ -1,9 +1,14 @@
+.nav-list {
+  list-style: none; }
+
 .link:link, .link:visited {
   text-decoration: none;
   color: inherit;
-  display: inline-block; }
+  display: inline-block;
+  font-size: var(--size-sml-1);
+  font-weight: 500; }
 
-.flex-center {
+.flex-center, .nav, .nav-list {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -11,7 +16,7 @@
 :root {
   --color-primary: #339af0;
   --color-primary-light-1: #e7f5ff;
-  --color-primary-light-2: #d0ebff;
+  --color-primary-light-2: #a5d8ff;
   --color-primary-light-3: #74c0fc;
   --color-primary-dark-1: #1864ab;
   --color-primary-dark-2: #1c7ed6;
@@ -23,7 +28,7 @@
   --color-white-2: #d4d4d4;
   --color-white-3: #a8a29e;
   --font-family: "Poppins", sans-serif;
-  --size-big-1: 9.6rem;
+  --size-big-1: 9rem;
   --size-big-2: 6.4rem;
   --size-big-3: 4.8rem;
   --size-mid-1: 3.4rem;
@@ -34,10 +39,7 @@
   --size-sml-3: 1.35rem;
   --size-v-sml-1: 0.8rem;
   --size-v-sml-2: 0.4rem;
-  --size-v-sml-3: 0.2rem;
-  --shadow-light-1: 100px #e8e8e8, 13px -13px 100px #ffffff;
-  --shadow-light-2: 100px #b5b5b5, 13px -13px 100px #ffffff;
-  --shadow-light-3: 77px #7d7d7d, 18px -18px 77px #ffffff; }
+  --size-v-sml-3: 0.2rem; }
 
 *,
 *:after,
@@ -52,27 +54,52 @@ html {
 body {
   font-size: var(--font-size-sml-1);
   line-height: 1;
-  font-family: --font-family;
+  font-family: var(--font-family);
   font-weight: 400;
   color: var(--color-black-3); }
 
+.main-container {
+  max-width: 180rem;
+  margin: 0 auto; }
+
 .heading-primary {
+  text-align: center;
+  display: inline-block;
+  font-size: var(--size-big-1);
+  font-weight: 400; }
+  .heading-primary span {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    transform: skew(-20deg);
+    background-image: linear-gradient(to right bottom, var(--color-primary-light-2), var(--color-primary));
+    margin-bottom: 0.4rem; }
+  .heading-primary span:first-child::after {
+    content: "Tejasva";
+    display: inline-block;
+    transform: skew(20deg);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+  .heading-primary span:last-child::after {
+    content: "Khandelwal";
+    display: inline-block;
+    transform: skew(20deg);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+
+.heading-secondary {
   font-size: var(--size-big-2);
   font-weight: 400; }
 
-.heading-secondary {
+.heading-tertiary {
   font-size: var(--size-big-3);
   font-weight: 400; }
 
-.heading-tertiary {
-  font-size: var(--size-mid-1);
-  font-weight: 400; }
-
 .text-big {
-  font-size: var(--size-mid-2); }
+  font-size: var(--size-mid-1);
+  font-weight: 500; }
 
 .text-normal {
-  font-size: var(--size-sml-1); }
+  font-size: var(--size-mid-3); }
 
 .text-sml {
   font-size: var(--size-sml-2); }
@@ -103,3 +130,68 @@ body {
 
 .margin-bottom-big-3 {
   margin-bottom: var(--size-big-3); }
+
+.flex-center {
+  gap: var(--size-v-sml-2); }
+
+.text-center {
+  text-align: center; }
+
+.link-main {
+  text-transform: uppercase; }
+  .link-main:hover, .link-main:active {
+    color: var(--color-primary); }
+
+.link-highlight {
+  text-transform: uppercase;
+  padding: 1.4rem 1.6rem;
+  background-color: var(--color-primary);
+  border-radius: 0.3rem; }
+  .link-highlight:hover, .link-highlight:active {
+    color: var(--color-white-1); }
+
+.nav {
+  justify-content: space-between;
+  padding: 2.8rem 6.4rem; }
+  .nav-wrapper {
+    z-index: 9999;
+    width: 100%; }
+  .nav-logo {
+    height: 5.2rem; }
+  .nav-list {
+    gap: 3.2rem; }
+
+.custom-shape-divider-bottom-1708193708 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0; }
+
+.custom-shape-divider-bottom-1708193708 svg {
+  position: relative;
+  display: block;
+  width: calc(149% + 1.3px);
+  height: 130px; }
+
+.custom-shape-divider-bottom-1708193708 .shape-fill {
+  fill: #339af0; }
+
+.hero-section {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+
+.hero-text-box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%); }
+
+.section-about {
+  height: 40vh;
+  background-color: var(--color-primary);
+  width: 100%; }

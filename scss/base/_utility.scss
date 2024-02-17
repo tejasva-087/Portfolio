@@ -32,4 +32,9 @@
 
 .flex-center {
   @extend %flex-center;
+  gap: var(--size-v-sml-2);
+}
+
+.text-center {
+  text-align: center;
 }

@@ -1,24 +1,59 @@
 .heading-primary {
+  text-align: center;
+  display: inline-block;
+  font-size: var(--size-big-1);
+  font-weight: 400;
+
+  & span {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    transform: skew(-20deg);
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-light-2),
+      var(--color-primary)
+    );
+    margin-bottom: 0.4rem;
+  }
+
+  & span:first-child {
+    &::after {
+      content: "Tejasva";
+      display: inline-block;
+      transform: skew(20deg);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+  }
+
+  & span:last-child {
+    &::after {
+      content: "Khandelwal";
+      display: inline-block;
+      transform: skew(20deg);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+  }
+}
+
+.heading-secondary {
   font-size: var(--size-big-2);
   font-weight: 400;
 }
 
-.heading-secondary {
+.heading-tertiary {
   font-size: var(--size-big-3);
   font-weight: 400;
 }
 
-.heading-tertiary {
-  font-size: var(--size-mid-1);
-  font-weight: 400;
-}
-
 .text-big {
-  font-size: var(--size-mid-2);
+  font-size: var(--size-mid-1);
+  font-weight: 500;
 }
 
 .text-normal {
-  font-size: var(--size-sml-1);
+  font-size: var(--size-mid-3);
 }
 
 .text-sml {

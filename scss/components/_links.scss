@@ -1,0 +1,6 @@
+.link {
+  &:link,
+  &:visited {
+    @extend link;
+  }
+}

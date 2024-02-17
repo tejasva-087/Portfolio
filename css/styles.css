@@ -1,0 +1,105 @@
+.link:link, .link:visited {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+:root {
+  --color-primary: #339af0;
+  --color-primary-light-1: #e7f5ff;
+  --color-primary-light-2: #d0ebff;
+  --color-primary-light-3: #74c0fc;
+  --color-primary-dark-1: #1864ab;
+  --color-primary-dark-2: #1c7ed6;
+  --color-primary-dark-3: #228be6;
+  --color-black-1: #0a0a0a;
+  --color-black-2: #171717;
+  --color-black-3: #262626;
+  --color-white-1: #fafafa;
+  --color-white-2: #d4d4d4;
+  --color-white-3: #a8a29e;
+  --font-family: "Poppins", sans-serif;
+  --size-big-1: 9.6rem;
+  --size-big-2: 6.4rem;
+  --size-big-3: 4.8rem;
+  --size-mid-1: 3.4rem;
+  --size-mid-2: 2.4rem;
+  --size-mid-3: 2rem;
+  --size-sml-1: 1.65rem;
+  --size-sml-2: 1.45rem;
+  --size-sml-3: 1.35rem;
+  --size-v-sml-1: 0.8rem;
+  --size-v-sml-2: 0.4rem;
+  --size-v-sml-3: 0.2rem;
+  --shadow-light-1: 100px #e8e8e8, 13px -13px 100px #ffffff;
+  --shadow-light-2: 100px #b5b5b5, 13px -13px 100px #ffffff;
+  --shadow-light-3: 77px #7d7d7d, 18px -18px 77px #ffffff; }
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: var(--font-size-sml-1);
+  line-height: 1;
+  font-family: --font-family;
+  font-weight: 400;
+  color: var(--color-black-3); }
+
+.heading-primary {
+  font-size: var(--size-big-2);
+  font-weight: 400; }
+
+.heading-secondary {
+  font-size: var(--size-big-3);
+  font-weight: 400; }
+
+.heading-tertiary {
+  font-size: var(--size-mid-1);
+  font-weight: 400; }
+
+.text-big {
+  font-size: var(--size-mid-2); }
+
+.text-normal {
+  font-size: var(--size-sml-1); }
+
+.text-sml {
+  font-size: var(--size-sml-2); }
+
+.margin-bottom-sml-1 {
+  margin-bottom: var(--size-sml-1); }
+
+.margin-bottom-sml-2 {
+  margin-bottom: var(--size-sml-2); }
+
+.margin-bottom-sml-3 {
+  margin-bottom: var(--size-sml-3); }
+
+.margin-bottom-mid-1 {
+  margin-bottom: var(--size-mid-1); }
+
+.margin-bottom-mid-2 {
+  margin-bottom: var(--size-mid-2); }
+
+.margin-bottom-mid-3 {
+  margin-bottom: var(--size-mid-3); }
+
+.margin-bottom-big-1 {
+  margin-bottom: var(--size-big-1); }
+
+.margin-bottom-big-2 {
+  margin-bottom: var(--size-big-2); }
+
+.margin-bottom-big-3 {
+  margin-bottom: var(--size-big-3); }

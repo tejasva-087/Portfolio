@@ -4,7 +4,7 @@
   "description": "pPortfolio website of Tejasva Khandelwal",
   "main": "script.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/styles.css -w",
+    "watch:sass": "node-sass scss/main.scss css/styles.css -w",
     "dev-server": "live-server",
     "start": "npm-run-all --parallel dev-server watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",

@@ -1,18 +1,18 @@
 // ABSTRACTS
-@import "/scss/abstracts/extends";
-@import "/scss/abstracts/variables";
+@import "abstracts/extends";
+@import "abstracts/variables";
 
 // BASE
-@import "/scss/base/reset";
-@import "/scss/base/typography";
-@import "/scss/base/utility";
-@import "/scss/base/animation";
+@import "base/reset";
+@import "base/typography";
+@import "base/utility";
+@import "base/animation";
 
 // COMPONENTS
-@import "/scss/components/links";
+@import "components/links";
 
 // Layputs
-// @import "/scss/layouts/"
+// @import "layouts/"
 
 // PAGES
-@import "/scss/pages/home";
+@import "pages/home";

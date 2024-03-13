@@ -155,7 +155,7 @@ body {
 
 .link-main {
   text-transform: uppercase; }
-  .link-main:hover, .link-main:active {
+  .link-main:hover, x .link-main:active {
     color: var(--color-primary); }
 
 .link-highlight {

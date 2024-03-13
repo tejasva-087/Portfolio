@@ -2,12 +2,15 @@
   &:link,
   &:visited {
     @extend %link;
+    transition: all 0.3s;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
   }
 
   &-main {
     text-transform: uppercase;
 
-    &:hover,
+    &:hover,x
     &:active {
       color: var(--color-primary);
     }
@@ -18,10 +21,13 @@
     padding: 1.4rem 1.6rem;
     background-color: var(--color-primary);
     border-radius: 0.3rem;
+    color: var(--color-white-1) !important;
 
     &:hover,
     &:active {
-      color: var(--color-white-1);
+      background-color: transparent;
+      color: var(--color-primary) !important;
+      box-shadow: inset 0 0 0 0.15rem var(--color-primary);
     }
   }
 }

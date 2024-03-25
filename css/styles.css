@@ -70,27 +70,6 @@ body {
   color: inherit;
   letter-spacing: 0.4rem;
   transition: all 0.3s; }
-  .heading-primary span {
-    display: inline-block;
-    padding: 0.3rem 1rem;
-    transform: skew(-20deg);
-    background-image: linear-gradient(to right bottom, var(--color-primary-light-2), var(--color-primary)); }
-  .heading-primary span:first-child {
-    margin-bottom: 0.4rem; }
-    .heading-primary span:first-child::after {
-      content: "Tejasva";
-      display: inline-block;
-      transform: skew(20deg);
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
-      padding: 0.8rem 0.4rem; }
-  .heading-primary span:last-child::after {
-    content: "Khandelwal";
-    display: inline-block;
-    transform: skew(20deg);
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    padding: 0.8rem 0.4rem; }
 
 .heading-secondary {
   font-size: var(--size-big-2);
@@ -148,6 +127,59 @@ body {
 .text-center {
   text-align: center; }
 
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2.8rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.move-down {
+  animation: move-down 0.5s;
+  animation-fill-mode: backwards; }
+
+@keyframes left-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-2.8rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+.left-in {
+  animation: left-in 0.5s 0.5s;
+  animation-fill-mode: backwards; }
+
+@keyframes move-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2.8rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.move-up {
+  animation: move-up 0.5s 0.7s;
+  animation-fill-mode: backwards; }
+
+@keyframes right-in {
+  0% {
+    opacity: 0;
+    transform: translateX(2.8rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.right-in {
+  animation: right-in 0.5s 0.7s backwards; }
+
+@keyframes hide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .link:link, .link:visited {
   transition: all 0.3s;
   letter-spacing: 0.2rem;
@@ -155,7 +187,7 @@ body {
 
 .link-main {
   text-transform: uppercase; }
-  .link-main:hover, .link-main:active {
+  .link-main:hover, x .link-main:active {
     color: var(--color-primary); }
 
 .link-highlight {
@@ -209,6 +241,22 @@ body {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -35%); }
+
+.heading-primary-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2rem;
+  row-gap: 1.4rem;
+  justify-items: center;
+  align-items: center; }
+  .heading-primary-box div:last-child {
+    grid-column: 1 / -1; }
+
+.highlight {
+  background-color: var(--color-primary);
+  padding: 0 0.8rem;
+  transform: skewX(-15deg);
+  animation: hide 0.6s 0.8s backwards; }
 
 .section-about {
   height: 40vh;

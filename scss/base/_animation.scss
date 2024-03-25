@@ -1,0 +1,86 @@
+///////////////////////////////////////////
+///////////////////////////////////////////
+// Hero page animation
+
+// Animation 1
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2.8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.move-down {
+  animation: move-down 0.5s;
+  animation-fill-mode: backwards;
+}
+
+// Animation 2
+@keyframes left-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-2.8rem);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.left-in {
+  animation: left-in 0.5s 0.5s;
+  animation-fill-mode: backwards;
+}
+
+// little delayed animations
+
+// Animation 3
+@keyframes move-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2.8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.move-up {
+  animation: move-up 0.5s 0.7s;
+  animation-fill-mode: backwards;
+}
+
+// Animation 4
+@keyframes right-in {
+  0% {
+    opacity: 0;
+    transform: translateX(2.8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.right-in {
+  animation: right-in 0.5s 0.7s backwards;
+}
+
+// Animation 5
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+///////////////////////////////////////////
+///////////////////////////////////////////

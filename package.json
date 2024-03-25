@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "pPortfolio website of Tejasva Khandelwal",
+  "description": "Portfolio website of Tejasva Khandelwal",
   "main": "script.js",
   "scripts": {
     "watch:sass": "node-sass scss/main.scss css/styles.css -w",

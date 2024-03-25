@@ -6,41 +6,6 @@
   color: inherit;
   letter-spacing: 0.4rem;
   transition: all 0.3s;
-
-  & span {
-    display: inline-block;
-    padding: 0.3rem 1rem;
-    transform: skew(-20deg);
-    background-image: linear-gradient(
-      to right bottom,
-      var(--color-primary-light-2),
-      var(--color-primary)
-    );
-  }
-
-  & span:first-child {
-    margin-bottom: 0.4rem;
-
-    &::after {
-      content: "Tejasva";
-      display: inline-block;
-      transform: skew(20deg);
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
-      padding: 0.8rem 0.4rem;
-    }
-  }
-
-  & span:last-child {
-    &::after {
-      content: "Khandelwal";
-      display: inline-block;
-      transform: skew(20deg);
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
-      padding: 0.8rem 0.4rem;
-    }
-  }
 }
 
 .heading-secondary {

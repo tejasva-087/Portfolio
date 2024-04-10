@@ -1,40 +1,32 @@
-.margin-bottom-sml-1 {
-  margin-bottom: var(--size-sml-1);
+.container {
+  max-width: var(--max-width-site);
+  margin: 0 auto;
 }
 
-.margin-bottom-sml-2 {
-  margin-bottom: var(--size-sml-2);
+.list {
+  list-style: none;
 }
 
-.margin-bottom-sml-3 {
-  margin-bottom: var(--size-sml-3);
+.margin-bottom {
+  &-v-big {
+    margin-bottom: 10.2rem;
+  }
+  &-big {
+    margin-bottom: 3.4rem;
+  }
+
+  &-big-mid {
+    margin-bottom: 3.4rem;
+  }
+
+  &-mid {
+    margin-bottom: 2.4rem;
+  }
 }
 
-.margin-bottom-mid-1 {
-  margin-bottom: var(--size-mid-1);
-}
-.margin-bottom-mid-2 {
-  margin-bottom: var(--size-mid-2);
-}
-.margin-bottom-mid-3 {
-  margin-bottom: var(--size-mid-3);
-}
-
-.margin-bottom-big-1 {
-  margin-bottom: var(--size-big-1);
-}
-.margin-bottom-big-2 {
-  margin-bottom: var(--size-big-2);
-}
-.margin-bottom-big-3 {
-  margin-bottom: var(--size-big-3);
-}
-
-.flex-center {
-  @extend %flex-center;
-  gap: var(--size-v-sml-2);
-}
-
-.text-center {
-  text-align: center;
+.icon {
+  &-big {
+    font-size: 5.4rem;
+    font-weight: 300;
+  }
 }

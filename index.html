@@ -6,20 +6,27 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
-    <!--  -->
+    <!-- Mobile icons -->
+    <!-- for apple -->
+    <link
+      rel="apple-touch-icon"
+      href="./assets/application-img/apple-icon-180x180.png"
+    />
+    <!-- for android -->
+    <link rel="manifest" href="./assets/application-img/manifest.json" />
+
     <!-- Description of site -->
     <meta name="description" content="Tejasva Khandelwal's portfolio website" />
-    <!--  -->
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Icon -->
+    <!-- Icon pack-->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Stylesheet -->
@@ -32,65 +39,52 @@
     <title>Tejasva Khandelwal &mdash; portfolio website</title>
   </head>
   <body>
-    <div class="main-container">
-      <!-- Nav -->
-      <div class="nav-wrapper">
-        <nav class="nav">
-          <div class="flex-center">
-            <img
-              src="/assets/tejasva-img.png"
-              alt="Tejasva Khandelwal"
-              class="nav-logo"
-            />
-            <span class="text-big">Tejasva Khandelwal</span>
-          </div>
-          <ul class="nav-list">
-            <li class="nav-items">
-              <a href="#" class="link link-main">About me</a>
-            </li>
-            <li class="nav-items">
-              <a href="#" class="link link-main">Tech stack</a>
-            </li>
-            <li class="nav-items">
-              <a href="#" class="link link-main">Experience</a>
-            </li>
-            <li class="nav-items">
-              <a href="#" class="link link-highlight">Let's Connect</a>
-            </li>
-          </ul>
-        </nav>
+    <!-- Navigation bar height => 15vh-->
+    <nav class="nav">
+      <div class="container nav-container">
+        <!-- logo-box -->
+        <a href="#" class="link nav-logo-box">
+          <img
+            src="/assets/tejasva-img.png"
+            alt="Tejasva's image"
+            class="nav-logo-img"
+          />
+          <p class="text-big">dev.tejas</p>
+        </a>
+        <!-- main-nav -->
+        <ul class="list nav-list text-sml">
+          <li class="nav-item">
+            <a href="#" class="link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link link-main">Let's Connect</a>
+          </li>
+        </ul>
       </div>
-      <!-- Hero -->
-      <header class="hero-section">
-        <div class="hero-text-box">
-          <p class="text-big margin-bottom-sml-1 move-down">Hello,</p>
-          <div class="heading-primary-box">
-            <h1 class="heading-primary left-in">I am</h1>
-            <div class="highlight">
-              <h1 class="heading-primary highlight-text right-in">Tejasva</h1>
-            </div>
-            <div class="highlight">
-              <h1 class="heading-primary highlight-text move-up">Khandelwal</h1>
-            </div>
-          </div>
-        </div>
-        <div class="custom-shape-divider-bottom-1708193708">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-      </header>
-      <section class="section-about">
-        <p class="text-big text-upper">About me</p>
+    </nav>
+    <main class="container">
+      <!-- Hero section height => 85vh-->
+      <section class="hero-section">
+        <p class="text text-big margin-bottom-big move-down">
+          Hello world, I am
+        </p>
+        <h1 class="heading-primary margin-bottom-mid slide-in-bg">
+          Tejasva Khandelwal
+        </h1>
+        <p class="text text-mid margin-bottom-v-big move-up">
+          Student \ Future Dev
+        </p>
+        <i class="ph-thin ph-caret-down icon-big move-up-down"></i>
       </section>
-    </div>
+    </main>
   </body>
 </html>

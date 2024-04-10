@@ -8,17 +8,14 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size-sml-1);
+  font-size: 1.6rem;
   color: var(--color-black-3);
   line-height: 1;
   font-weight: 400;
-}
-
-.main-container {
-  max-width: 180rem;
-  margin: 0 auto;
+  scroll-behavior: smooth;
 }

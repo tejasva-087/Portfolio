@@ -1,6 +1,6 @@
 // ABSTRACTS
-@import "abstracts/extends";
 @import "abstracts/variables";
+@import "abstracts/extends";
 
 // BASE
 @import "base/reset";
@@ -15,5 +15,4 @@
 @import "layouts/navigation";
 @import "layouts/hero-section";
 @import "layouts/section-about";
-@import "layouts/tech-stack";
 @import "layouts/projects";

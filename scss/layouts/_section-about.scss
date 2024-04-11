@@ -1,5 +1,5 @@
 .about-section {
-  padding: 12.4rem 16.4rem;
+  padding: var(--ps-1) var(--ps-2);
   background-image: linear-gradient(
     to bottom right,
     var(--color-primary),
@@ -11,5 +11,5 @@
 .tech-icon-box {
   display: flex;
   align-items: center;
-  gap: 2.4rem;
+  gap: var(--m-1);
 }

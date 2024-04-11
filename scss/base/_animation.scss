@@ -4,7 +4,7 @@
 @keyframes appear-in {
   0% {
     opacity: 0;
-    transform: translateY(-6.4rem);
+    transform: translateY(var(--b-2));
   }
   100% {
     opacity: 1;
@@ -36,7 +36,7 @@
 @keyframes move-down {
   0% {
     opacity: 0;
-    transform: translateY(-6.4rem);
+    transform: translateY(var(--b-2));
   }
   100% {
     opacity: 1;
@@ -62,7 +62,7 @@
 @keyframes move-up {
   0% {
     opacity: 0;
-    transform: translateY(3.4rem);
+    transform: translateY(var(--m-1));
   }
   100% {
     opacity: 1;

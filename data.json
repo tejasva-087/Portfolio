@@ -1,3 +1,35 @@
 {
-  "techStack": ["mysql", "git", "python", "sass", "html", "css", "javascript"]
+  "techStack": ["mysql", "git", "python", "sass", "html", "css", "javascript"],
+  "projects": [
+    {
+      "name": "Website for Himshri spices",
+      "description": "This is the site I am creating for a small spice startup called 'Hinshree spices' to show case their products and connecting people through whatsapp business.",
+      "completed": "no",
+      "techStack": ["sass", "css", "html", "javascript"],
+      "links": "https://himshri-masala-optimised-version.netlify.app/"
+    },
+    {
+      "name": "MySQL connector module",
+      "description": "This is a python module that I have been working on. What this module basically do is that if a person with little knowlegde about RDBms and no knowledge of sql can interact with database create, store, modify etc the tables with few lines of python code.",
+      "completed": "no",
+      "techStack": ["python", "mysql"],
+      "links": "https://himshri-masala-optimised-version.netlify.app/"
+    },
+    {
+      "name": "Mark up",
+      "description": "This is a project that I created in my high school this is basically a software that help segrigate the boards marks sent by the CBSE from a text file to a csv or xls file. Currently been upgrading it making it a desktop application using electron also attaching it with a mysql for storing data in database.",
+      "completed": "no",
+      "techStack": [
+        "mysql",
+        "git",
+        "python",
+        "sass",
+        "html",
+        "css",
+        "javascript",
+        "electron"
+      ],
+      "links": "https://himshri-masala-optimised-version.netlify.app/"
+    }
+  ]
 }

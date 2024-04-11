@@ -1,6 +1,6 @@
 .nav {
   width: 100vw;
-  padding: 4.2rem 6.4rem;
+  padding: var(--m-2) var(--b-2);
   height: 15vh;
 
   // container
@@ -14,16 +14,16 @@
     display: flex !important;
     // (because link is set to inline-block therefore !important is being used)
     align-items: center;
-    gap: 0.8rem;
+    gap: var(--vs-2);
   }
 
   &-logo-img {
-    width: 8rem;
+    width: var(--b-3);
   }
 
   // main nav
   &-list {
     @extend %flex-center;
-    gap: 4.2rem;
+    gap: var(--b-3);
   }
 }

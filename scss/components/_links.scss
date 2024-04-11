@@ -4,12 +4,25 @@
     @extend %link;
   }
 
+  &:hover,
+  &:active {
+    color: var(--color-primary);
+  }
+
   &-main {
     &:link,
     &:visited {
+      border-radius: 0.4rem;
       padding: 1.6rem 2.4rem;
       color: var(--color-white-1);
       background-color: var(--color-primary);
+      color: var(--color-primary-light-1);
+    }
+
+    &:hover,
+    &:active {
+      color: var(--color-white-1);
+      // background-color: var(--color-white-1);
     }
   }
 }

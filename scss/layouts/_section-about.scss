@@ -1,0 +1,15 @@
+.about-section {
+  padding: 12.4rem 16.4rem;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-primary-dark-3)
+  );
+  color: var(--color-primary-light-1);
+}
+
+.tech-icon-box {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}

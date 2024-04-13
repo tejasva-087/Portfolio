@@ -1,11 +1,7 @@
 .slider {
   display: grid;
   grid-template-columns: repeat(var(--slider-size), 100%);
-  align-items: center;
   position: relative;
-  column-gap: var(--vb-2);
-  padding: var(--m-1) var(--b-1);
-  transition: 0.4s all;
 
   &-box {
     display: grid;
@@ -13,6 +9,8 @@
     align-items: center;
     column-gap: var(--m-1);
     row-gap: var(--s-3);
+    transition: 1s all;
+    padding: var(--s-3) var(--vb-1);
 
     &-description {
       grid-column: 1 / -1;
@@ -40,12 +38,12 @@
 
     &--left {
       left: 0;
-      transform: translate(-70%, -50%);
+      transform: translate(-50%, -50%);
     }
 
-    &--rigth {
+    &--right {
       right: 0;
-      transform: translate(40%, -50%);
+      transform: translate(0, -50%);
     }
   }
 }

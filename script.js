@@ -5,7 +5,7 @@ const data = {
     {
       name: "Website for Himshri spices",
       description:
-        "This is the site I am creating for a small spice startup called 'Himshree spices' to show case their products and connecting people through whatsapp business.",
+        "This is the site I am creating for a small spice startup called 'Himshree spices' to show case their products and connecting the customers through whatsapp business to the seller.",
       status: "underway",
       techStack: ["sass", "css", "html", "javascript"],
       linkText: "view site",
@@ -14,7 +14,7 @@ const data = {
     {
       name: "MySQL connector module",
       description:
-        "This is a python module that I have been working on. What this module basically do is that if a person with little knowlegde about RDBms and no knowledge of sql can interact with database create, store, modify etc the tables with few lines of python code.",
+        "This is a python module, I am working on which can help users with no knowledge of sql queries to interact with database and create, modify etc the tables in the database.",
       status: "cooking",
       techStack: ["python", "mysql"],
       linkText: "view code",
@@ -23,7 +23,7 @@ const data = {
     {
       name: "Mark up",
       description:
-        "This is a project that I created in my high school this is basically a software that help segrigate the boards marks sent by the CBSE from a text file to a csv or xls file. Currently been upgrading it making it a desktop application using electron also attaching it with a mysql for storing data in database.",
+        "This is a software that segrigate the boards marks sent by the CBSE from a text file to a csv or xls file. Currently been upgrading it making it a desktop application using electron and integrating with mysql.",
       status: "evolving",
       techStack: [
         "mysql",
@@ -92,3 +92,32 @@ data.projects.forEach((val) => {
   `;
   slider.insertAdjacentHTML("afterbegin", html);
 });
+
+///////////////////////////////
+// SLIDER FUNCTIONALITY
+///////////////////////////////
+const sliderBox = document.getElementsByClassName("slider-box");
+const sliderBtnLeft = document.querySelector(".slider-btn--left");
+const sliderBtnRight = document.querySelector(".slider-btn--right");
+
+let maxLen = sliderBox.length - 1;
+let current = 0;
+
+const slideRight = function () {
+  current++;
+  current = current <= maxLen ? current : 0;
+  [...sliderBox].forEach((val) => {
+    val.style.transform = `translateX(${current * -100}%)`;
+  });
+};
+
+const slideLeft = function () {
+  current--;
+  current = current < 0 ? maxLen : current;
+  [...sliderBox].forEach((val) => {
+    val.style.transform = `translateX(${current * -100}%)`;
+  });
+};
+
+sliderBtnRight.addEventListener("click", slideRight);
+sliderBtnLeft.addEventListener("click", slideLeft);

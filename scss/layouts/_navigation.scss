@@ -24,6 +24,7 @@
   // main nav
   &-list {
     @extend %flex-center;
-    gap: var(--b-3);
+    // font-size: var(--s-2);
+    gap: var(--m-3);
   }
 }

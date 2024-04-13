@@ -1,0 +1,51 @@
+.slider {
+  display: grid;
+  grid-template-columns: repeat(var(--slider-size), 100%);
+  align-items: center;
+  position: relative;
+  column-gap: var(--vb-2);
+  padding: var(--m-1) var(--b-1);
+  transition: 0.4s all;
+
+  &-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: var(--m-1);
+    row-gap: var(--s-3);
+
+    &-description {
+      grid-column: 1 / -1;
+    }
+
+    &-link {
+      font-size: var(--s-3);
+      grid-column: 1 / 1;
+    }
+
+    &-tech-stack {
+      display: flex;
+      align-items: center;
+      gap: var(--s-1);
+      grid-column: 1 / 1;
+    }
+  }
+
+  &-btn {
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+
+    &--left {
+      left: 0;
+      transform: translate(-70%, -50%);
+    }
+
+    &--rigth {
+      right: 0;
+      transform: translate(40%, -50%);
+    }
+  }
+}

@@ -17,6 +17,14 @@
     background-size: 220%;
     background-position: 0;
   }
+
+  &-tertiary {
+    font-size: var(--m-3);
+    list-style: 1.15;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
 }
 
 .text {
@@ -44,5 +52,17 @@
   &-sml {
     font-size: var(--s-3);
     line-height: 1.5;
+  }
+
+  &-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--color-white-1);
+    background-color: var(--color-primary);
   }
 }

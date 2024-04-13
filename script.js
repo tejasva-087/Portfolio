@@ -103,6 +103,9 @@ const sliderBtnRight = document.querySelector(".slider-btn--right");
 let maxLen = sliderBox.length - 1;
 let current = 0;
 
+// Setting up the grid size
+document.documentElement.style.setProperty("--slider-size", `${maxLen + 1}`);
+
 const slideRight = function () {
   current++;
   current = current <= maxLen ? current : 0;

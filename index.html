@@ -40,8 +40,8 @@
   </head>
   <body>
     <!-- Navigation bar height => 15vh-->
-    <nav class="nav">
-      <div class="container nav-container">
+    <header class="header">
+      <nav class="container nav-container">
         <!-- logo-box -->
         <a href="#" class="link nav-logo-box appear-in">
           <img
@@ -52,45 +52,39 @@
           <p class="text-big">dev.tejas</p>
         </a>
         <!-- main-nav -->
-        <ul class="list nav-list text-sml">
+        <ul class="list nav-list text-sml appear-in">
           <li class="nav-item">
-            <a href="#" class="link appear-in">About</a>
+            <a href="#" class="link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="link">Experience</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="link appear-in">Experience</a>
+            <a href="#" class="link">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="link appear-in">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="link appear-in">Timeline</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="link link-main appear-in">Let's Connect</a>
+            <a href="#" class="link link-main">Let's Connect</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <main>
       <!-- Hero section height => 85vh-->
       <div class="container">
         <section class="hero-section">
           <img
-            src="/assets/tejasva-img-2.png"
+            src="/assets/tejasva-img.png"
             alt="Tejasva khandelwal's photo"
-            class="hero-img margin-bottom-sml-1 opac-in"
+            class="hero-img margin-bottom-mid-3 opac-in"
           />
-          <p class="text text-big move-down margin-bottom-sml-3">
-            Hello world, I am
-          </p>
-          <h1 class="heading-primary slide-in-bg margin-bottom-sml-3">
-            Tejasva Khandelwal
-          </h1>
+          <p class="text text-big move-down">Hello world, I am</p>
+          <h1 class="heading-primary slide-in-bg">Tejasva Khandelwal</h1>
           <p class="text text-mid move-up">Student / Future dev.</p>
         </section>
       </div>
       <!-- About me section -->
-      <section class="about-section container">
+      <section class="section about-section container">
         <p class="text text-v-big-light margin-bottom-mid-1"># About me</p>
 
         <p class="text text-mid margin-bottom-sml-1">
@@ -105,46 +99,10 @@
         <p class="text-mid margin-bottom-sml-2">
           This is how my current tech stack looks like:
         </p>
-        <div class="tech-icon-box">
-          <!-- <img
-            src="/assets/icons/javascript.png"
-            alt="javascript icon"
-            class="icon-mid-bg"
-          />
-          <img
-            src="/assets/icons/python.png"
-            alt="css icon"
-            class="icon-mid-bg"
-          />
-          <img
-            src="/assets/icons/html.png"
-            alt="html icon"
-            class="icon-mid-bg"
-          />
-          <img
-            src="/assets/icons/css.png"
-            alt="html icon"
-            class="icon-mid-bg"
-          />
-          <img
-            src="/assets/icons/sass.png"
-            alt="html icon"
-            class="icon-mid-bg"
-          />
-          <img
-            src="/assets/icons/git.png"
-            alt="html icon"
-            class="icon-mid-bg"
-          />
-          <img
-            src="/assets/icons/mysql.png"
-            alt="html icon"
-            class="icon-mid-bg"
-          /> -->
-        </div>
+        <div class="tech-icon-box"></div>
       </section>
       <!-- Project section -->
-      <section class="project-section">
+      <section class="section project-section container">
         <p class="text-v-big-light margin-bottom-mid-1"># Projects</p>
         <div class="slider">
           <div>
@@ -157,6 +115,16 @@
               <i class="ph ph-caret-left"></i>
             </button>
           </div>
+        </div>
+      </section>
+      <section class="section experience-section container">
+        <p class="text-v-big-light margin-bottom-mid-1"># Experience</p>
+        <!-- Tabbed component -->
+        <div class="tab-comp">
+          <!-- tab comp btn -->
+          <div class="tab-comp-btn-container"></div>
+          <!-- tab comp data -->
+          <div class="tab-comp-data-container"></div>
         </div>
       </section>
     </main>

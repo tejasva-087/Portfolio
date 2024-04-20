@@ -9,6 +9,13 @@
     color: var(--color-primary);
   }
 
+  &-underline {
+    &:link,
+    &:visited {
+      text-decoration: underline;
+    }
+  }
+
   &-main {
     &:link,
     &:visited {
@@ -24,6 +31,22 @@
       box-shadow: 0 0 0 0.2rem var(--color-primary) inset;
       background-color: transparent;
       color: var(--color-primary);
+    }
+  }
+
+  &-white {
+    &:link,
+    &:visited {
+      border-radius: 0.6rem;
+      color: var(--color-white-1) !important;
+      border: 0.3rem solid var(--color-white-1) !important;
+      padding: 0.8rem 1.8rem;
+    }
+
+    &:hover,
+    &:active {
+      color: var(--color-primary) !important;
+      background-color: var(--color-white-1) !important;
     }
   }
 }

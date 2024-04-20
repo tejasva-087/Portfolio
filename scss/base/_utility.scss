@@ -8,7 +8,15 @@
 }
 
 .margin-bottom {
-  &-v-big {
+  &-v-big-3 {
+    margin-bottom: var(--vb-3);
+  }
+
+  &-v-big-2 {
+    margin-bottom: var(--vb-2);
+  }
+
+  &-v-big-1 {
     margin-bottom: var(--vb-3);
   }
 
@@ -60,6 +68,11 @@
   }
 }
 
+// text color
+.color-primary {
+  color: var(--color-primary);
+}
+
 .icon-mid-bg {
   width: var(--b-3);
   border-radius: 50%;
@@ -70,9 +83,9 @@
 
 .flex-center {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 
 .tag {
@@ -81,4 +94,8 @@
   border-radius: 10rem;
   background-color: var(--color-primary);
   color: var(--color-white-1);
+}
+
+.section {
+  padding: var(--ps-1) var(--ps-2);
 }

@@ -7,12 +7,12 @@
 }
 
 .hero-img {
-  width: 25%;
+  width: 15%;
 }
 
 // About section
 .about-section {
-  padding: var(--ps-1) var(--ps-2);
+  // padding: var(--ps-1) var(--ps-2);
   background-image: linear-gradient(
     to bottom right,
     var(--color-primary),
@@ -29,5 +29,6 @@
 
 // Section project
 .project-section {
-  padding: var(--ps-1) var(--ps-2);
+  // padding: var(--ps-1) var(--ps-2) 0;
+  padding-bottom: 0;
 }

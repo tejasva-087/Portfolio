@@ -1,8 +1,10 @@
-.nav {
+.header {
   width: 100vw;
   padding: var(--m-2) var(--b-2);
   height: 15vh;
+}
 
+.nav {
   // container
   &-container {
     @extend %flex-center;

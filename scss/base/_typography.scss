@@ -40,6 +40,11 @@
     font-weight: 300;
   }
 
+  &-mid-light {
+    font-size: var(--b-2);
+    font-weight: 300;
+  }
+
   &-big {
     font-size: var(--m-3);
   }
@@ -64,5 +69,9 @@
     border-radius: 50%;
     color: var(--color-white-1);
     background-color: var(--color-primary);
+  }
+
+  &-primary-light-1 {
+    color: var(--color-primary-light-1);
   }
 }

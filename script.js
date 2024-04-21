@@ -3,6 +3,15 @@ const data = {
 
   projects: [
     {
+      name: "This portfolio website",
+      description:
+        "I always wanted to create my own site o here it is ;) Just to tell others about myself and improve my skills.",
+      status: "complete",
+      techStack: ["sass", "css", "html", "javascript"],
+      linkText: "view repo",
+      link: "https://github.com/tejasva-087/Portfolio",
+    },
+    {
       name: "Website for Himshri spices",
       description:
         "This is the site I am creating for a small spice startup called 'Himshree spices' to show case their products and connecting the customers through whatsapp business to the seller.",
@@ -43,34 +52,33 @@ const data = {
     {
       image: "firefox",
       name: "Mozilla Firefox Club",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque aut autem minus maiores nam pariatur deserunt, ad libero nihil, impedit rem aperiam iure voluptatem enim consectetur? Fuga, assumenda ab.",
-      linkText: "View site",
-      link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
+      description: `I'm so grateful for the opportunity to join the club as a web developer!  Following a competitive selection process, I was thrilled to receive the offer and I can't wait to learn from the talented team and help the club achieve its goals.`,
+      linkText: "View repo",
+      link: "https://github.com/tejasva-087/mozilla-firefox-event-management-site",
     },
     {
       image: "healthotech",
       name: "Health-O-Tech",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque aut autem minus maiores nam pariatur deserunt, ad libero nihil, impedit rem aperiam iure voluptatem enim consectetur? Fuga, assumenda ab.",
-      linkText: "View site",
-      link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
+        "I'm thrilled to have been selected as a Core Member of the technical team for Health-O-Tech! After a screening process and interview, I'm honored to be offered this position. I can't wait to leverage my skills and collaborate with the talented team and grow together.",
+      linkText: "appointment letter",
+      link: "https://drive.google.com/file/d/1qCDYbqO4gayI0XfO8VIUp5IOOSDCH7OE/view?usp=drive_link",
     },
     {
       image: "codex",
       name: "Code-X",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque aut autem minus maiores nam pariatur deserunt, ad libero nihil, impedit rem aperiam iure voluptatem enim consectetur? Fuga, assumenda ab.",
-      linkText: "View site",
+        "So this was a Frontend and Marketing hackathos and my first hackathon at VIT Bhopal. Me and my team gave our best and ended up getting selected for the first two rounds. Even though we didn't won we absolutely enjoyed it. It was so fun :)",
+      linkText: "View repo",
       link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
     },
     {
       image: "halocon",
       name: "Halocon 4.0",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque aut autem minus maiores nam pariatur deserunt, ad libero nihil, impedit rem aperiam iure voluptatem enim consectetur? Fuga, assumenda ab.",
-      linkText: "View site",
-      link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
+        "Back in high school I got selected for this hakathos. It was a Python hackathon including two rounds. Me and my partner cleared the first round and secured the 4th position among 20 other schools. It was absolutely amazing.",
+      linkText: "View certificate",
+      link: "https://drive.google.com/file/d/1o8Lq9dTj5xJI5luEXGeuWadOCOFk2Xd9/view?usp=sharing",
     },
   ],
 };

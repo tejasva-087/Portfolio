@@ -5,8 +5,8 @@ const data = {
     {
       name: "This portfolio website",
       description:
-        "I always wanted to create my own site o here it is ;) Just to tell others about myself and improve my skills.",
-      status: "complete",
+        "I implemented a somewhat dynamic functionality so that i don't have to copy and past the html code again and again. I would highly appreciate if you would look at the code.",
+      status: "completed",
       techStack: ["sass", "css", "html", "javascript"],
       linkText: "view repo",
       link: "https://github.com/tejasva-087/Portfolio",
@@ -50,14 +50,14 @@ const data = {
 
   experience: [
     {
-      image: "firefox",
+      image: "firefox.png",
       name: "Mozilla Firefox Club",
       description: `I'm so grateful for the opportunity to join the club as a web developer!  Following a competitive selection process, I was thrilled to receive the offer and I can't wait to learn from the talented team and help the club achieve its goals.`,
       linkText: "View repo",
       link: "https://github.com/tejasva-087/mozilla-firefox-event-management-site",
     },
     {
-      image: "healthotech",
+      image: "healthotech.png",
       name: "Health-O-Tech",
       description:
         "I'm thrilled to have been selected as a Core Member of the technical team for Health-O-Tech! After a screening process and interview, I'm honored to be offered this position. I can't wait to leverage my skills and collaborate with the talented team and grow together.",
@@ -65,7 +65,7 @@ const data = {
       link: "https://drive.google.com/file/d/1qCDYbqO4gayI0XfO8VIUp5IOOSDCH7OE/view?usp=drive_link",
     },
     {
-      image: "codex",
+      image: "codex.webp",
       name: "Code-X",
       description:
         "So this was a Frontend and Marketing hackathos and my first hackathon at VIT Bhopal. Me and my team gave our best and ended up getting selected for the first two rounds. Even though we didn't won we absolutely enjoyed it. It was so fun :)",
@@ -73,10 +73,10 @@ const data = {
       link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
     },
     {
-      image: "halocon",
+      image: "halocon.webp",
       name: "Halocon 4.0",
       description:
-        "Back in high school I got selected for this hakathos. It was a Python hackathon including two rounds. Me and my partner cleared the first round and secured the 4th position among 20 other schools. It was absolutely amazing.",
+        "Back in high school I got selected for this hakathon. It was a Python hackathon including two rounds. Me and my partner cleared the first round and secured the 4th position among 20 other schools. It was absolutely amazing.",
       linkText: "View certificate",
       link: "https://drive.google.com/file/d/1o8Lq9dTj5xJI5luEXGeuWadOCOFk2Xd9/view?usp=sharing",
     },
@@ -195,7 +195,7 @@ data.experience.forEach((val, i) => {
       i === 0 ? "--active" : ""
     }" id="temp-comp-data--${i}">
     <img
-    src="./assets/experience/${val.image}.png"
+    src="./assets/experience/${val.image}"
     alt="${val.image} logo"
     class="tab-comp-img margin-bottom-sml-2"
   />
@@ -208,7 +208,7 @@ data.experience.forEach((val, i) => {
     ${val.description}
   </p>
   <div class="text-sml text-primary-white-1">
-    <a href="${val.link}" class="link link-white" target="_blank">
+    <a href="${val.link}" class="link link-white-bg" target="_blank">
       <div class="flex-center">
         <span>${val.linkText}</span>
         <i class="ph ph-arrow-right"></i>

@@ -15,6 +15,7 @@ html {
   font-size: 50.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  transition: all 0.3s;
 }
 
 body {
@@ -26,4 +27,5 @@ body {
   line-height: 1;
   font-weight: 400;
   scroll-behavior: smooth;
+  transition: all 0.3s;
 }

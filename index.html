@@ -27,7 +27,7 @@
     />
 
     <!-- Icon pack-->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/css/styles.css" />
@@ -45,7 +45,7 @@
         <!-- logo-box -->
         <a href="#" class="link nav-logo-box appear-in">
           <img
-            src="/assets/tejasva-img.png"
+            src="/assets/hero-img.webp"
             alt="Tejasva's image"
             class="nav-logo-img"
           />
@@ -70,39 +70,40 @@
     </header>
     <main>
       <!-- Hero section height => 85vh-->
-      <div class="container">
-        <section class="hero-section">
-          <img
-            src="/assets/tejasva-img.png"
-            alt="Tejasva khandelwal's photo"
-            class="hero-img margin-bottom-mid-3 opac-in"
-          />
-          <p class="text text-big move-down">Hello world, I am</p>
-          <h1 class="heading-primary slide-in-bg">Tejasva Khandelwal</h1>
-          <p class="text text-mid move-up">Student / Future dev.</p>
-        </section>
-      </div>
-      <!-- About me section -->
-      <section class="section about-section container">
-        <p class="text text-v-big-light margin-bottom-mid-1"># About me</p>
+      <section class="hero-section container">
+        <img
+          src="/assets/hero-img.webp"
+          alt="Tejasva khandelwal's photo"
+          class="hero-img margin-bottom-mid-3 opac-in"
+        />
+        <p class="text text-big move-down">Hello world, I am</p>
+        <h1 class="heading-primary slide-in-bg">Tejasva Khandelwal</h1>
+        <p class="text text-mid move-up">Student / Future dev.</p>
+      </section>
 
-        <p class="text text-mid margin-bottom-sml-1">
-          Hey there! I'm Tejasva Khandelwal, a future dev in the making! I've
-          been wrangling code with JavaScript and Python for a couple of years
-          now, and let me tell you, it's like solving puzzles with superpowers.
-          When I'm not elbow-deep in code, you might find me sketching out
-          fantastical designs or jamming to tunes that fuel my creativity.
-          Life's a whirlwind, and I'm here to ride it.
-        </p>
-        <!-- Tech stack -->
-        <p class="text-mid margin-bottom-sml-2">
-          This is how my current tech stack looks like:
-        </p>
-        <div class="tech-icon-box"></div>
+      <!-- About me section -->
+      <section class="section about-section">
+        <div class="container">
+          <p class="text text-v-big-light margin-bottom-sml-1"># About me</p>
+
+          <p class="text text-mid margin-bottom-sml-2">
+            Hey there! I'm Tejasva Khandelwal, a future dev in the making! I'am
+            a college student pursuing my higher education from VIT Bhopal. I
+            just love to code so much and When I'm not coding, you might find me
+            sketching and or jamming to tunes that fuel my creativity. I am very
+            passionate about learning new stuff and play around with the newly
+            gathered power(skills) :) and create something fun.
+          </p>
+          <!-- Tech stack -->
+          <p class="text-mid margin-bottom-sml-3">
+            This is how my current tech stack looks like:
+          </p>
+          <div class="tech-icon-box"></div>
+        </div>
       </section>
       <!-- Project section -->
       <section class="section project-section container">
-        <p class="text-v-big-light margin-bottom-mid-1"># Projects</p>
+        <p class="text-v-big-light margin-bottom-sml-1"># Projects</p>
         <div class="slider">
           <div>
             <button
@@ -118,13 +119,45 @@
       </section>
       <!-- Experience section -->
       <section class="section experience-section container">
-        <p class="text-v-big-light margin-bottom-mid-1"># Experience</p>
+        <p class="text-v-big-light margin-bottom-sml-1"># Experience</p>
         <!-- Tabbed component -->
         <div class="tab-comp">
           <!-- tab comp btn -->
           <div class="tab-comp-btn-container"></div>
           <!-- tab comp data -->
           <div class="tab-comp-data-container"></div>
+        </div>
+      </section>
+      <!-- gallery section -->
+      <section class="section gallery-section">
+        <div class="container"></div>
+        <p class="text-v-big-light margin-bottom-mid-1"># Gallery</p>
+          <div class="gallery-img-box">
+            <div class="gallery-box">
+              <img
+                src="./assets/gallery/firefox.png"
+                alt="Image of tejasva in codex hackathon"
+                class="gallery-img margin-bottom-sml-3"
+              />
+              <p class="text-mid"># Mozilla Firefox club</p>
+            </div>
+            <div class="gallery-box">
+              <img
+                src="./assets/gallery/codex.png"
+                alt="Image of tejasva in codex hackathon"
+                class="gallery-img margin-bottom-sml-3"
+              />
+              <p class="text-mid"># Codex</p>
+            </div>
+            <div class="gallery-box">
+              <img
+                src="./assets/gallery/extracarricular.png"
+                alt="Image of tejasva in codex hackathon"
+                class="gallery-img margin-bottom-sml-3"
+              />
+              <p class="text-mid"># Extras</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

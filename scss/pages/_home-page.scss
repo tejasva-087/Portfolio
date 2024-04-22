@@ -12,13 +12,14 @@
 
 // About section
 .about-section {
-  // padding: var(--ps-1) var(--ps-2);
   background-image: linear-gradient(
     to bottom right,
     var(--color-primary),
     var(--color-primary-dark-3)
   );
   color: var(--color-primary-light-1);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  padding: var(--ps-2);
 }
 
 .tech-icon-box {
@@ -31,4 +32,16 @@
 .project-section {
   // padding: var(--ps-1) var(--ps-2) 0;
   padding-bottom: 0;
+}
+
+// Section gallery
+.gallery-section {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-primary-dark-3)
+  );
+  color: var(--color-primary-light-1);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  padding: var(--ps-2);
 }

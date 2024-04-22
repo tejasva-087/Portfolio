@@ -1,0 +1,11 @@
+.gallery {
+  &-img-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4.4rem;
+  }
+
+  &-img {
+    width: 100%;
+  }
+}

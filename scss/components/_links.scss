@@ -34,7 +34,7 @@
     }
   }
 
-  &-white {
+  &-white-bg {
     &:link,
     &:visited {
       border-radius: 0.6rem;
@@ -47,6 +47,18 @@
     &:active {
       color: var(--color-primary) !important;
       background-color: var(--color-white-1) !important;
+    }
+  }
+
+  &-white-txt {
+    &:link,
+    &:visited {
+      color: var(--color-white-1);
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
     }
   }
 }

@@ -60,7 +60,8 @@
 html {
   font-size: 50.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  transition: all 0.3s; }
 
 body {
   overflow: hidden;
@@ -70,7 +71,8 @@ body {
   background-color: #fff;
   line-height: 1;
   font-weight: 400;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  transition: all 0.3s; }
 
 .heading-primary {
   line-height: 1;
@@ -122,7 +124,7 @@ body {
     color: var(--color-primary-light-1); }
 
 .container {
-  max-width: var(--max-width-site);
+  max-width: var(--max-width);
   margin: 0 auto; }
 
 .list {
@@ -268,15 +270,21 @@ body {
   background-color: transparent;
   color: var(--color-primary); }
 
-.link-white:link, .link-white:visited {
+.link-white-bg:link, .link-white-bg:visited {
   border-radius: 0.6rem;
   color: var(--color-white-1) !important;
   border: 0.3rem solid var(--color-white-1) !important;
   padding: 0.8rem 1.8rem; }
 
-.link-white:hover, .link-white:active {
+.link-white-bg:hover, .link-white-bg:active {
   color: var(--color-primary) !important;
   background-color: var(--color-white-1) !important; }
+
+.link-white-txt:link, .link-white-txt:visited {
+  color: var(--color-white-1); }
+
+.link-white-txt:hover, .link-white-txt:active {
+  text-decoration: underline; }
 
 .header {
   width: 100vw;
@@ -373,6 +381,19 @@ body {
     height: 10.4rem;
     border-radius: 50%; }
 
+.gallery-img-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4.4rem; }
+
+.gallery-img {
+  width: 100%; }
+
+.footer {
+  padding: var(--ps-2) var(--b-2);
+  background-color: var(--color-primary);
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%); }
+
 .hero-section {
   flex-direction: column;
   padding: 8% 0;
@@ -383,7 +404,9 @@ body {
 
 .about-section {
   background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark-3));
-  color: var(--color-primary-light-1); }
+  color: var(--color-primary-light-1);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  padding: var(--ps-2); }
 
 .tech-icon-box {
   display: flex;
@@ -392,3 +415,9 @@ body {
 
 .project-section {
   padding-bottom: 0; }
+
+.gallery-section {
+  background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark-3));
+  color: var(--color-primary-light-1);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  padding: var(--ps-2); }

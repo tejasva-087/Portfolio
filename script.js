@@ -380,7 +380,7 @@ const imageLoader = function (ent, obs) {
 const gallerySecObs = new IntersectionObserver(imageLoader, {
   root: null,
   threshold: 0,
-  rootMargin: "300px",
+  rootMargin: " 300px",
 });
 
 gallerySecObs.observe(gallerySection);

@@ -330,3 +330,57 @@ const slideLeft = function () {
 
 sliderBtnRight.addEventListener("click", slideRight);
 sliderBtnLeft.addEventListener("click", slideLeft);
+
+//////////////////////////////
+// INTERSECTION OBSERVERS
+//////////////////////////////
+
+////////////////////////////////
+// Section scroll in animation
+
+const allSection = document.querySelectorAll(".section");
+// Adding a hidden class to the section
+allSection.forEach((section) => section.classList.add("section-hidden"));
+
+const revealElements = function (ent, obs) {
+  const [entry] = ent;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  obs.unobserve(entry.target);
+};
+const sectionObs = new IntersectionObserver(revealElements, {
+  root: null,
+  threshold: 0.2,
+});
+
+allSection.forEach((section) => {
+  sectionObs.observe(section);
+});
+
+//////////////////////////////
+// lazy loading
+
+const gallerySection = document.querySelector(".gallery-section");
+const galleryImg = document.querySelectorAll(".gallery-img");
+
+const imageLoader = function (ent, obs) {
+  const [entry] = ent;
+  // if (!entry.isIntersecting) return;
+  galleryImg.forEach((img) => {
+    img.src = img.dataset.src;
+  });
+  window.addEventListener("load", function () {
+    galleryImg.forEach((img) => {
+      img.classList.remove("gallery-img-blur");
+    });
+  });
+  obs.unobserve(gallerySection);
+};
+
+const gallerySecObs = new IntersectionObserver(imageLoader, {
+  root: null,
+  threshold: 0,
+  rootMargin: "300px",
+});
+
+gallerySecObs.observe(gallerySection);

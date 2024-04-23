@@ -20,14 +20,15 @@
     &:link,
     &:visited {
       border-radius: var(--vs-1);
-      padding: var(--vs-3) var(--s-2);
+      padding: var(--vs-2) var(--s-2);
       color: var(--color-white-1);
       background-color: var(--color-primary);
-      color: var(--color-white-1);
+      border: var(--vs-1) solid transparent;
     }
 
     &:hover,
     &:active {
+      border: var(--vs-1) solid var(--color-primary);
       box-shadow: 0 0 0 0 var(--vs-1) var(--color-primary) inset;
       background-color: transparent;
       color: var(--color-primary);

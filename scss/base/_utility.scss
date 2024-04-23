@@ -73,25 +73,28 @@
   color: var(--color-primary);
 }
 
-.icon-mid-bg {
-  width: var(--b-3);
+.icon {
   border-radius: 50%;
   position: relative;
   background-color: var(--color-primary-light-1);
-  padding: var(--s-1);
+
+  &-mid-bg {
+    width: var(--b-2);
+    padding: var(--vs-3);
+  }
 }
 
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: var(--vs-2);
 }
 
 .tag {
   display: inline-block;
   padding: var(--vs-1) var(--s-1);
-  border-radius: 10rem;
+  border-radius: var(--vb-2);
   background-color: var(--color-primary);
   color: var(--color-white-1);
 }

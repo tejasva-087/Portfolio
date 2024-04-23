@@ -33,6 +33,9 @@
   --ps-2: 16.4rem;
   --slider-size: 3; }
 
+.footer-nav-list {
+  list-style: none; }
+
 .link:link, .link:visited {
   text-decoration: none;
   color: inherit;
@@ -41,7 +44,7 @@
   font-weight: inherit;
   transition: all 0.3s; }
 
-.nav-container, .nav-list, .hero-section {
+.nav-container, .nav-list, .footer-nav, .footer-nav-list, .hero-section {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -114,8 +117,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem;
-    height: 6rem;
+    width: var(--b-2);
+    height: var(--b-2);
     text-align: center;
     border-radius: 50%;
     color: var(--color-white-1);
@@ -178,23 +181,24 @@ body {
 .color-primary {
   color: var(--color-primary); }
 
-.icon-mid-bg {
-  width: var(--b-3);
+.icon {
   border-radius: 50%;
   position: relative;
-  background-color: var(--color-primary-light-1);
-  padding: var(--s-1); }
+  background-color: var(--color-primary-light-1); }
+  .icon-mid-bg {
+    width: var(--b-2);
+    padding: var(--vs-3); }
 
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem; }
+  gap: var(--vs-2); }
 
 .tag {
   display: inline-block;
   padding: var(--vs-1) var(--s-1);
-  border-radius: 10rem;
+  border-radius: var(--vb-2);
   background-color: var(--color-primary);
   color: var(--color-white-1); }
 
@@ -266,15 +270,15 @@ body {
   color: var(--color-white-1); }
 
 .link-main:hover, .link-main:active {
-  box-shadow: 0 0 0 0.2rem var(--color-primary) inset;
+  box-shadow: 0 0 0 0 var(--vs-1) var(--color-primary) inset;
   background-color: transparent;
   color: var(--color-primary); }
 
 .link-white-bg:link, .link-white-bg:visited {
-  border-radius: 0.6rem;
+  border-radius: var(--vs-1);
   color: var(--color-white-1) !important;
-  border: 0.3rem solid var(--color-white-1) !important;
-  padding: 0.8rem 1.8rem; }
+  border: var(--vs-1) solid var(--color-white-1) !important;
+  padding: var(--vs-2) var(--s-2); }
 
 .link-white-bg:hover, .link-white-bg:active {
   color: var(--color-primary) !important;
@@ -343,19 +347,19 @@ body {
 .tab-comp {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 1.8rem; }
+  column-gap: var(--s-2); }
   .tab-comp-btn-container {
     display: flex;
     align-items: center;
     justify-self: center;
     flex-direction: column;
-    gap: 1.4rem;
-    margin-top: 7.4rem; }
+    gap: var(--s-1);
+    margin-top: var(--b-3); }
   .tab-comp-btn {
     background: none;
     width: 100%;
-    padding: 1.2rem 2.4rem;
-    border-radius: 2.4rem;
+    padding: var(--vs-3) var(--s-3);
+    border-radius: var(--s-3);
     border: 0.1rem solid var(--color-primary-light-1);
     background-color: var(--color-white-1);
     cursor: pointer;
@@ -365,34 +369,46 @@ body {
       color: var(--color-white-1);
       border: 0.1rem solid transparent; }
   .tab-comp-data-container {
-    border-radius: 5rem;
+    border-radius: var(--b-1);
     overflow: hidden;
     border: 0.1rem solid var(--color-primary-light-1); }
   .tab-comp-data {
     width: 100%;
     height: 100%;
-    padding: 6.4rem 8.4rem;
+    padding: var(--b-2) var(--b-3);
     display: none; }
     .tab-comp-data--active {
       display: block;
       background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark-3)); }
   .tab-comp-img {
-    width: 10.4rem;
-    height: 10.4rem;
+    width: var(--vb-2);
+    height: var(--vb-2);
     border-radius: 50%; }
 
 .gallery-img-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 4.4rem; }
+  column-gap: var(--m-3); }
 
 .gallery-img {
   width: 100%; }
 
 .footer {
-  padding: var(--ps-2) var(--b-2);
+  padding: var(--vb-3) var(--b-2) var(--b-1);
   background-color: var(--color-primary);
-  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%); }
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  color: var(--color-primary-light-1); }
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .footer-img {
+    width: var(--ps-1);
+    height: var(--ps-1);
+    padding: var(--vs-3); }
+  .footer-nav-list {
+    gap: var(--vs-3); }
 
 .hero-section {
   flex-direction: column;
@@ -412,9 +428,6 @@ body {
   display: flex;
   align-items: center;
   gap: var(--m-1); }
-
-.project-section {
-  padding-bottom: 0; }
 
 .gallery-section {
   background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark-3));

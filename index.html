@@ -54,16 +54,16 @@
         <!-- main-nav -->
         <ul class="list nav-list text-sml appear-in">
           <li class="nav-item">
-            <a href="#" class="link">About</a>
+            <a href="#about-me" class="link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="link">Projects</a>
+            <a href="#project" class="link">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="link">Experience</a>
+            <a href="#experience" class="link">Experience</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="link link-main">Let's Connect</a>
+            <a href="#footer" class="link link-main">Let's Connect</a>
           </li>
         </ul>
       </nav>
@@ -82,7 +82,7 @@
       </section>
 
       <!-- About me section -->
-      <section class="section about-section">
+      <section class="section about-section" id="about-me">
         <div class="container">
           <p class="text text-v-big-light margin-bottom-sml-1"># About me</p>
 
@@ -101,24 +101,8 @@
           <div class="tech-icon-box"></div>
         </div>
       </section>
-      <!-- Project section -->
-      <section class="section project-section container">
-        <p class="text-v-big-light margin-bottom-sml-1"># Projects</p>
-        <div class="slider">
-          <div>
-            <button
-              class="text-sml text-highlight slider-btn slider-btn--right"
-            >
-              <i class="ph ph-caret-right"></i>
-            </button>
-            <button class="text-sml text-highlight slider-btn slider-btn--left">
-              <i class="ph ph-caret-left"></i>
-            </button>
-          </div>
-        </div>
-      </section>
       <!-- Experience section -->
-      <section class="section experience-section container">
+      <section class="section experience-section container" id="experience">
         <p class="text-v-big-light margin-bottom-sml-1"># Experience</p>
         <!-- Tabbed component -->
         <div class="tab-comp">
@@ -130,8 +114,8 @@
       </section>
       <!-- gallery section -->
       <section class="section gallery-section">
-        <div class="container"></div>
-        <p class="text-v-big-light margin-bottom-mid-1"># Gallery</p>
+        <div class="container">
+          <p class="text-v-big-light margin-bottom-mid-1"># Gallery</p>
           <div class="gallery-img-box">
             <div class="gallery-box">
               <img
@@ -160,6 +144,45 @@
           </div>
         </div>
       </section>
+      <!-- Project section -->
+      <section class="section project-section container" id="project">
+        <p class="text-v-big-light margin-bottom-sml-1"># Projects</p>
+        <div class="slider">
+          <div>
+            <button
+              class="text-sml text-highlight slider-btn slider-btn--right"
+            >
+              <i class="ph ph-caret-right"></i>
+            </button>
+            <button class="text-sml text-highlight slider-btn slider-btn--left">
+              <i class="ph ph-caret-left"></i>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="container footer-container">
+        <div class="flex-center">
+          <img
+            src="./assets/hero-img.webp"
+            alt="Tejasva Khandelwal photo"
+            class="footer-img"
+          />
+          <p class="text-mid-light">dev.tejas</p>
+        </div>
+        <div class="text-sml margin-bottom-sml-1 flex-center">
+          <i class="ph ph-envelope-simple"></i>
+          <a href="mailto:tejasvakh3011@gmail.com" class="link link-white-txt">
+            tejasvakh3011@gmail.com
+          </a>
+        </div>
+        <nav class="footer-nav margin-bottom-sml-1">
+          <ul class="footer-nav-list socials-list"></ul>
+        </nav>
+        <p class="text-sml footer-copyright flex-center"></p>
+      </div>
+    </footer>
   </body>
 </html>

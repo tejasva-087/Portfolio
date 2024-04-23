@@ -28,7 +28,7 @@
 
     &:hover,
     &:active {
-      box-shadow: 0 0 0 0.2rem var(--color-primary) inset;
+      box-shadow: 0 0 0 0 var(--vs-1) var(--color-primary) inset;
       background-color: transparent;
       color: var(--color-primary);
     }
@@ -37,10 +37,10 @@
   &-white-bg {
     &:link,
     &:visited {
-      border-radius: 0.6rem;
+      border-radius: var(--vs-1);
       color: var(--color-white-1) !important;
-      border: 0.3rem solid var(--color-white-1) !important;
-      padding: 0.8rem 1.8rem;
+      border: var(--vs-1) solid var(--color-white-1) !important;
+      padding: var(--vs-2) var(--s-2);
     }
 
     &:hover,

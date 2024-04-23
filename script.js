@@ -1,7 +1,56 @@
-const data = {
+// MAIN DATA
+let data1 = {
+  // Tech stack
   techStack: ["mysql", "git", "python", "sass", "html", "css", "javascript"],
 
+  // Experience
+  experience: [
+    // image file name
+    // heading
+    // description
+    // link-text to be displayed
+    // link
+    {
+      image: "firefox.png",
+      name: "Mozilla Firefox Club",
+      description: `I'm so grateful for the opportunity to join the club as a web developer!  Following a competitive selection process, I was thrilled to receive the offer and I can't wait to learn from the talented team and help the club achieve its goals.`,
+      linkText: "View repo",
+      link: "https://github.com/tejasva-087/mozilla-firefox-event-management-site",
+    },
+    {
+      image: "healthotech.png",
+      name: "Health-O-Tech",
+      description:
+        "I'm thrilled to have been selected as a Core Member of the technical team for Health-O-Tech! After a screening process and interview, I'm honored to be offered this position. I can't wait to leverage my skills and collaborate with the talented team and grow together.",
+      linkText: "appointment letter",
+      link: "https://drive.google.com/file/d/1qCDYbqO4gayI0XfO8VIUp5IOOSDCH7OE/view?usp=drive_link",
+    },
+    {
+      image: "codex.webp",
+      name: "Code-X",
+      description:
+        "So this was a Frontend and Marketing hackathos and my first hackathon at VIT Bhopal. Me and my team gave our best and ended up getting selected for the first two rounds. Even though we didn't won we absolutely enjoyed it. It was so fun :)",
+      linkText: "View repo",
+      link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
+    },
+    {
+      image: "halocon.webp",
+      name: "Halocon 4.0",
+      description:
+        "Back in high school I got selected for this hakathon. It was a Python hackathon including two rounds. Me and my partner cleared the first round and secured the 4th position among 20 other schools. It was absolutely amazing.",
+      linkText: "View certificate",
+      link: "https://drive.google.com/file/d/1o8Lq9dTj5xJI5luEXGeuWadOCOFk2Xd9/view?usp=sharing",
+    },
+  ],
+
+  // Project data
   projects: [
+    // name of the project
+    // description
+    // status whether completed or not
+    // techstack used
+    // line-text to be displayed
+    // link
     {
       name: "This portfolio website",
       description:
@@ -48,106 +97,220 @@ const data = {
     },
   ],
 
-  experience: [
+  // Footer links
+  links: [
     {
-      image: "firefox.png",
-      name: "Mozilla Firefox Club",
-      description: `I'm so grateful for the opportunity to join the club as a web developer!  Following a competitive selection process, I was thrilled to receive the offer and I can't wait to learn from the talented team and help the club achieve its goals.`,
-      linkText: "View repo",
-      link: "https://github.com/tejasva-087/mozilla-firefox-event-management-site",
+      name: "linkedin",
+      link: "https://www.linkedin.com/in/tejasva-khandelwal/",
     },
     {
-      image: "healthotech.png",
-      name: "Health-O-Tech",
-      description:
-        "I'm thrilled to have been selected as a Core Member of the technical team for Health-O-Tech! After a screening process and interview, I'm honored to be offered this position. I can't wait to leverage my skills and collaborate with the talented team and grow together.",
-      linkText: "appointment letter",
-      link: "https://drive.google.com/file/d/1qCDYbqO4gayI0XfO8VIUp5IOOSDCH7OE/view?usp=drive_link",
+      name: "twitter",
+      link: "https://twitter.com/tejasva_087",
     },
     {
-      image: "codex.webp",
-      name: "Code-X",
-      description:
-        "So this was a Frontend and Marketing hackathos and my first hackathon at VIT Bhopal. Me and my team gave our best and ended up getting selected for the first two rounds. Even though we didn't won we absolutely enjoyed it. It was so fun :)",
-      linkText: "View repo",
-      link: "https://github.com/tejasva-087/codex_tejasva-khandelwal-70.17.159.182",
+      name: "instagram",
+      link: "https://www.instagram.com/tejuss087/",
     },
     {
-      image: "halocon.webp",
-      name: "Halocon 4.0",
-      description:
-        "Back in high school I got selected for this hakathon. It was a Python hackathon including two rounds. Me and my partner cleared the first round and secured the 4th position among 20 other schools. It was absolutely amazing.",
-      linkText: "View certificate",
-      link: "https://drive.google.com/file/d/1o8Lq9dTj5xJI5luEXGeuWadOCOFk2Xd9/view?usp=sharing",
+      name: "github",
+      link: "https://github.com/tejasva-087",
+    },
+    {
+      name: "replit",
+      link: "https://replit.com/@tejasva-087",
+    },
+    {
+      name: "leetcode",
+      link: "https://leetcode.com/tejasva-087/",
+    },
+    {
+      name: "codewars",
+      link: "https://www.codewars.com/users/Tejas-087",
+    },
+    {
+      name: "udemy",
+      link: "https://www.udemy.com/user/tejasva-khandelwal/",
     },
   ],
 };
 
 ///////////////////////////////
-// INSERTING TECHSTACK ICONS
+// Function to insert HTML
 ///////////////////////////////
 
-// HTML ELEMENTS
+const insertHTML = function (position, htmlContent, element) {
+  element.insertAdjacentHTML(position, htmlContent);
+};
+
+//////////////////////////////////////////////////
+// CREATING AND INSERTING HTML (techstack icons)
+
 const techStackBox = document.querySelector(".tech-icon-box");
 
-// FUNCTIONALITY
-data.techStack.forEach((val) => {
-  let html = `<img
-     src="/assets/icons/${val}.png"
-     alt="${val} icon"
-     class="icon-mid-bg"
-  />`;
-  techStackBox.insertAdjacentHTML("afterbegin", html);
-});
+const techStackHtml = data1.techStack.reduce((acc, val) => {
+  return (acc += `<img src="/assets/icons/${val}.png" alt="${val} icon" class="icon icon-mid-bg" />`);
+}, "");
 
-///////////////////////////////
-// CREATING PROJECT WORK
-///////////////////////////////
+insertHTML("afterbegin", techStackHtml, techStackBox);
 
-// HTML ELEMENTS
-const slider = document.querySelector(".slider");
+////////////////////////////////////////////////////
+// CREATING AND INSERTING HTML (experience section)
 
-// FUNCTIONALITY
-data.projects.forEach((val) => {
-  let imagetechStackHTML = ``;
-  val.techStack.forEach((ele) => {
-    imagetechStackHTML += `<img src="/assets/icons/${ele}.png" alt="${ele}" class="icon-sml" />`;
-  });
-  let html = `<div class="slider-box">
-  <h3 class="heading-tertiary">${val.name}</h3>
-  <p class="text-sml tag">${val.status}</p>
-  <p class="text text-mid slider-box-description">
-    ${val.description}
-  </p>
-  <div class="slider-box-tech-stack">
-    <p class="text-mid">Made using:</p>
-    ${imagetechStackHTML}
-  </div>
-  <div class="slider-box-link">
-    <a href="${val.link}" class="link link-main" target="_blank">
+// Buttons
+const btnContainer = document.querySelector(".tab-comp-btn-container");
+
+const expBtnHtml = data1.experience.reduce((acc, val, i) => {
+  return (acc += `<button class="tab-comp-btn tab-comp-btn${
+    i === 0 ? "--active" : ""
+  } text-sml" data-btn-no="${i}"> ${val.name} </button>`);
+}, "");
+
+insertHTML("afterbegin", expBtnHtml, btnContainer);
+
+// data
+const dataContainer = document.querySelector(".tab-comp-data-container");
+
+const expDataHtml = data1.experience.reduce((acc, val, i) => {
+  return (acc += `
+  <div class="tab-comp-data tab-comp-data${
+    i === 0 ? "--active" : ""
+  }" id="temp-comp-data--${i}">
+    <img
+      src="./assets/experience/${val.image}"
+      alt="${val.image} logo"
+      class="tab-comp-img margin-bottom-sml-2"
+    />
+    <h3 class="text-mid-light text-primary-light-1 margin margin-bottom-sml-2">
+      ${val.name}
+    </h3>
+    <p class="text-mid text-primary-light-1 margin-bottom-sml-2">
+      ${val.description}
+    </p>
+    <div class="text-sml text-primary-white-1">
+      <a href="${val.link}" class="link link-white-bg" target="_blank">
       <div class="flex-center">
         <span>${val.linkText}</span>
-        <i class="ph ph-arrow-right icon"></i>
+        <i class="ph ph-arrow-right"></i>
       </div>
+      </a>
+    </div>
+  </div>`);
+}, "");
+
+insertHTML("beforeend", expDataHtml, dataContainer);
+
+////////////////////////////////////////////////////
+// CREATING AND INSERTING HTML (project section)
+
+// Setting the grid size on the basis of the project array length
+document.documentElement.style.setProperty(
+  "--slider-size",
+  `${data1.projects.length}`
+);
+
+const slider = document.querySelector(".slider");
+
+const projectDataHtml = data1.projects.reduce((acc, val) => {
+  return (
+    acc +
+    `
+    <div class="slider-box">
+      <h3 class="heading-tertiary">${val.name}</h3>
+      <p class="text-sml tag">${val.status}</p>
+      <p class="text text-mid slider-box-description">
+        ${val.description}
+      </p>
+      <div class="slider-box-tech-stack">
+        <p class="text-mid">Made using:</p>
+        ${val.techStack.reduce((acc, val) => {
+          return (
+            `<img src="/assets/icons/${val}.png" alt="${val}" class="icon-sml" />` +
+            acc
+          );
+        }, "")}
+      </div>
+      <div class="slider-box-link">
+        <a href="${val.link}" class="link link-main" target="_blank">
+          <div class="flex-center">
+            <span>${val.linkText}</span>
+            <i class="ph ph-arrow-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  `
+  );
+}, "");
+
+insertHTML("afterbegin", projectDataHtml, slider);
+
+////////////////////////////////////////////////////
+// CREATING AND INSERTING HTML (footer)
+
+// copyright content
+const copyrightText = document.querySelector(".footer-copyright");
+
+const curentYear = new Date().getFullYear();
+
+copyrightText.innerHTML = `
+  Copyright <i class="ph ph-copyright"></i> ${curentYear}
+  <a href="https://www.linkedin.com/in/tejasva-khandelwal/" class="link link-white-txt" target="_blank">Tejasva Khandelwal</a> 
+  All rights reserved.
+`;
+
+// Footer links
+const footerNavLinks = document.querySelector(".socials-list");
+const navLinkHmtl = data1.links.reduce((acc, val) => {
+  return (
+    acc +
+    `<li class="footer-nav-item">
+    <a href="${val.link}" class="link link-white-txt" target="_blank">
+      <img
+        src="./assets/socials/${val.name}.png"
+        alt="${val.name}"
+        class="icon icon-mid-bg"
+      />
     </a>
-  </div>
-</div>
-  `;
-  slider.insertAdjacentHTML("afterbegin", html);
+  </li>`
+  );
+}, "");
+insertHTML("beforeend", navLinkHmtl, footerNavLinks);
+
+//////////////////////////////////
+// Functionality for components
+//////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+// CREATING AND INSERTING HTML (techstack icons)tabbed component
+
+// FUNCTIONALITY implementing (event deligation)
+btnContainer.addEventListener("click", (e) => {
+  // Cheking for the element that triggered event
+  if (!e.target.classList.contains("tab-comp-btn")) return;
+
+  // Removing the active class from all the elements
+  btnContainer
+    .querySelector(".tab-comp-btn--active")
+    .classList.remove("tab-comp-btn--active");
+  dataContainer
+    .querySelector(".tab-comp-data--active")
+    .classList.remove("tab-comp-data--active");
+
+  // Adding active class to the target component
+  e.target.classList.add("tab-comp-btn--active");
+  document
+    .getElementById(`temp-comp-data--${e.target.dataset.btnNo}`)
+    .classList.add("tab-comp-data--active");
 });
 
-///////////////////////////////
-// SLIDER FUNCTIONALITY
-///////////////////////////////
+//////////////////////////////////////////////////////////////////
+// CREATING AND INSERTING HTML (techstack icons)tabbed component
 const sliderBox = document.getElementsByClassName("slider-box");
 const sliderBtnLeft = document.querySelector(".slider-btn--left");
 const sliderBtnRight = document.querySelector(".slider-btn--right");
 
 let maxLen = sliderBox.length - 1;
 let current = 0;
-
-// Setting up the grid size
-document.documentElement.style.setProperty("--slider-size", `${maxLen + 1}`);
 
 const slideRight = function () {
   current++;
@@ -167,80 +330,3 @@ const slideLeft = function () {
 
 sliderBtnRight.addEventListener("click", slideRight);
 sliderBtnLeft.addEventListener("click", slideLeft);
-
-//////////////////////////////////
-// CREATING TABBED COMPONENT HTML
-//////////////////////////////////
-
-// HTML ELEMENTS
-const btnContainer = document.querySelector(".tab-comp-btn-container");
-const dataContainer = document.querySelector(".tab-comp-data-container");
-
-// CREATING TAB BTN COMPONENT
-data.experience.forEach((val, i) => {
-  btnContainer.insertAdjacentHTML(
-    "beforeend",
-    `<button class="tab-comp-btn tab-comp-btn${
-      i === 0 ? "--active" : ""
-    } text-sml" data-btn-no="${i}">
-    ${val.name}
-  </button>`
-  );
-});
-// CREATING TAB DATA COMPONENT
-data.experience.forEach((val, i) => {
-  dataContainer.insertAdjacentHTML(
-    "beforeend",
-    `<div class="tab-comp-data tab-comp-data${
-      i === 0 ? "--active" : ""
-    }" id="temp-comp-data--${i}">
-    <img
-    src="./assets/experience/${val.image}"
-    alt="${val.image} logo"
-    class="tab-comp-img margin-bottom-sml-2"
-  />
-  <h3
-    class="text-mid-light text-primary-light-1 margin margin-bottom-sml-2"
-  >
-    ${val.name}
-  </h3>
-  <p class="text-mid text-primary-light-1 margin-bottom-sml-2">
-    ${val.description}
-  </p>
-  <div class="text-sml text-primary-white-1">
-    <a href="${val.link}" class="link link-white-bg" target="_blank">
-      <div class="flex-center">
-        <span>${val.linkText}</span>
-        <i class="ph ph-arrow-right"></i>
-      </div>
-    </a>
-  </div>
-  </div>`
-  );
-});
-
-//////////////////////////////////
-// TABBED COMPONENT fUNCTIONALITY
-//////////////////////////////////
-
-// Implement event deligation
-btnContainer.addEventListener("click", (e) => {
-  // Cheking for the element that triggered event
-  if (e.target.classList.contains("tab-comp-btn")) {
-    // Removing the active class from all the elements
-    btnContainer
-      .querySelector(".tab-comp-btn--active")
-      .classList.remove("tab-comp-btn--active");
-    dataContainer
-      .querySelector(".tab-comp-data--active")
-      .classList.remove("tab-comp-data--active");
-
-    // Adding active class to the target component
-    e.target.classList.add("tab-comp-btn--active");
-    console.log(
-      document
-        .getElementById(`temp-comp-data--${e.target.dataset.btnNo}`)
-        .classList.add("tab-comp-data--active")
-    );
-  }
-});

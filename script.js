@@ -280,7 +280,7 @@ insertHTML("beforeend", navLinkHmtl, footerNavLinks);
 // Functionality for components
 //////////////////////////////////
 
-//////////////////////////////////////////////////////////////////
+//////////////////////////////////////
 // TABBED COMPONENT FUNCTIONALITY
 
 // FUNCTIONALITY implementing (event deligation)
@@ -303,7 +303,7 @@ btnContainer.addEventListener("click", (e) => {
     .classList.add("tab-comp-data--active");
 });
 
-//////////////////////////////////////////////////////////////////
+//////////////////////////
 // SLIDER FUNCTIONALITY
 const sliderBox = document.getElementsByClassName("slider-box");
 const sliderBtnLeft = document.querySelector(".slider-btn--left");
@@ -331,10 +331,50 @@ const slideLeft = function () {
 sliderBtnRight.addEventListener("click", slideRight);
 sliderBtnLeft.addEventListener("click", slideLeft);
 
+//////////////////////////
+// MOBILE NAVIGATION
+const mainNav = document.querySelector(".nav-container");
+const navBtn = document.querySelector(".nav-btn");
+const navList = document.querySelector(".nav-list");
+
+navBtn.addEventListener("click", function () {
+  mainNav.classList.toggle("nav-open");
+});
+
+navList.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (mainNav.classList.contains("nav-open"))
+    mainNav.classList.toggle("nav-open");
+  const element = document.getElementById(`${e.target.dataset.id}`);
+  element.style.scrollMargin = `${
+    header.getBoundingClientRect().height + 25
+  }px`;
+  element.scrollIntoView({ behavior: "smooth" });
+});
+
 //////////////////////////////
 // INTERSECTION OBSERVERS
 //////////////////////////////
 
+////////////////////////////////
+// Navigation visibility
+const header = document.querySelector(".header");
+const heroSection = document.querySelector(".hero-section");
+
+const navSticyMaker = function (ent) {
+  const [entry] = ent;
+  console.log(entry);
+  if (!entry.isIntersecting) header.classList.add("header-sticky");
+  else header.classList.remove("header-sticky");
+};
+
+const aboutSectionObs = new IntersectionObserver(navSticyMaker, {
+  root: null,
+  threshold: 0.75,
+  rootMargin: `${header.getBoundingClientRect().height}px`,
+});
+
+aboutSectionObs.observe(heroSection);
 ////////////////////////////////
 // Section scroll in animation
 

@@ -12,10 +12,28 @@
 }
 
 html {
-  font-size: 50.5%;
+  font-size: 48.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
   transition: all 0.3s;
+
+  // 180- and above
+  @media (min-width: 112.5em) {
+    font-size: 62.5%;
+  }
+  // 1000px
+  @media (max-width: 62.5em) {
+    font-size: 37.6%;
+  }
+
+  // 600px
+  @media (max-width: 37.5em) {
+    font-size: 25.6%;
+  }
+  // 310 px
+  @media (max-width: 19.375em) {
+    font-size: 24%;
+  }
 }
 
 body {

@@ -26,6 +26,16 @@
       align-items: center;
       gap: var(--s-1);
       grid-column: 1 / 1;
+      @media (max-width: 18.75em) {
+        & p:first-child {
+          display: none;
+        }
+      }
+    }
+
+    // 500PX
+    @media (max-width: 31.25em) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -38,7 +48,7 @@
 
     &--left {
       left: 0;
-      transform: translate(-50%, -50%);
+      transform: translate(0, -50%);
     }
 
     &--right {

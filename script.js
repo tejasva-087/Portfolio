@@ -1,5 +1,5 @@
 // MAIN DATA
-let data1 = {
+let data = {
   // Tech stack
   techStack: ["mysql", "git", "python", "sass", "html", "css", "javascript"],
 
@@ -147,7 +147,7 @@ const insertHTML = function (position, htmlContent, element) {
 
 const techStackBox = document.querySelector(".tech-icon-box");
 
-const techStackHtml = data1.techStack.reduce((acc, val) => {
+const techStackHtml = data.techStack.reduce((acc, val) => {
   return (acc += `<img src="/assets/icons/${val}.png" alt="${val} icon" class="icon icon-mid-bg" />`);
 }, "");
 
@@ -159,7 +159,7 @@ insertHTML("afterbegin", techStackHtml, techStackBox);
 // Buttons
 const btnContainer = document.querySelector(".tab-comp-btn-container");
 
-const expBtnHtml = data1.experience.reduce((acc, val, i) => {
+const expBtnHtml = data.experience.reduce((acc, val, i) => {
   return (acc += `<button class="tab-comp-btn tab-comp-btn${
     i === 0 ? "--active" : ""
   } text-sml" data-btn-no="${i}"> ${val.name} </button>`);
@@ -170,7 +170,7 @@ insertHTML("afterbegin", expBtnHtml, btnContainer);
 // data
 const dataContainer = document.querySelector(".tab-comp-data-container");
 
-const expDataHtml = data1.experience.reduce((acc, val, i) => {
+const expDataHtml = data.experience.reduce((acc, val, i) => {
   return (acc += `
   <div class="tab-comp-data tab-comp-data${
     i === 0 ? "--active" : ""
@@ -205,12 +205,12 @@ insertHTML("beforeend", expDataHtml, dataContainer);
 // Setting the grid size on the basis of the project array length
 document.documentElement.style.setProperty(
   "--slider-size",
-  `${data1.projects.length}`
+  `${data.projects.length}`
 );
 
 const slider = document.querySelector(".slider");
 
-const projectDataHtml = data1.projects.reduce((acc, val) => {
+const projectDataHtml = data.projects.reduce((acc, val) => {
   return (
     acc +
     `
@@ -253,14 +253,14 @@ const copyrightText = document.querySelector(".footer-copyright");
 const curentYear = new Date().getFullYear();
 
 copyrightText.innerHTML = `
-  Copyright <i class="ph ph-copyright"></i> ${curentYear}
+  <span> Copyright &copy; ${curentYear}</span>
   <a href="https://www.linkedin.com/in/tejasva-khandelwal/" class="link link-white-txt" target="_blank">Tejasva Khandelwal</a> 
-  All rights reserved.
+  <span>All rights reserved.</span>
 `;
 
 // Footer links
-const footerNavLinks = document.querySelector(".socials-list");
-const navLinkHmtl = data1.links.reduce((acc, val) => {
+const footerNavLinks = document.querySelector(".footer-nav-list");
+const navLinkHmtl = data.links.reduce((acc, val) => {
   return (
     acc +
     `<li class="footer-nav-item">
@@ -360,27 +360,52 @@ allSection.forEach((section) => {
 //////////////////////////////
 // lazy loading
 
-const gallerySection = document.querySelector(".gallery-section");
-const galleryImg = document.querySelectorAll(".gallery-img");
+const imgTargets = document.querySelectorAll("img[data-src]");
 
-const imageLoader = function (ent, obs) {
-  const [entry] = ent;
-  // if (!entry.isIntersecting) return;
-  galleryImg.forEach((img) => {
-    img.src = img.dataset.src;
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function (e) {
+    console.log(e);
+    entry.target.classList.remove("gallery-img-blur");
   });
-  window.addEventListener("load", function () {
-    galleryImg.forEach((img) => {
-      img.classList.remove("gallery-img-blur");
-    });
-  });
-  obs.unobserve(gallerySection);
+
+  observer.unobserve(entry.target);
 };
 
-const gallerySecObs = new IntersectionObserver(imageLoader, {
+const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0,
-  rootMargin: " 300px",
+  rootMargin: "200px",
 });
 
-gallerySecObs.observe(gallerySection);
+imgTargets.forEach((img) => imgObserver.observe(img));
+
+/////////////////////////
+// RESIZE EVENT
+/////////////////////////
+
+const viewportWidth = window.visualViewport;
+if (viewportWidth.width <= 700) {
+  [...btnContainer.children].forEach((ele, i) => {
+    ele.textContent = i + 1;
+  });
+}
+
+window.addEventListener("resize", () => {
+  const viewportWidth = window.visualViewport;
+  if (viewportWidth.width <= 700) {
+    [...btnContainer.children].forEach((ele, i) => {
+      ele.textContent = i + 1;
+    });
+  } else {
+    [...btnContainer.children].forEach((ele, i) => {
+      ele.textContent = data.experience[i].name;
+    });
+  }
+});

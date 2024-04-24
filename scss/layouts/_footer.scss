@@ -5,9 +5,7 @@
   color: var(--color-primary-light-1);
 
   &-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
     flex-direction: column;
   }
 
@@ -25,5 +23,15 @@
     @extend %list;
     @extend %flex-center;
     gap: var(--vs-3);
+    line-break: auto;
+  }
+
+  &-copyright {
+    @extend %flex-center;
+    // 325 px
+    @media (max-width: 20.3125em) {
+      flex-direction: column;
+      gap: 0.05rem !important;
+    }
   }
 }

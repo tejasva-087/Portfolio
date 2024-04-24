@@ -49,6 +49,11 @@
         var(--color-primary-dark-3)
       );
     }
+
+    // 700
+    @media (max-width: 43.75em) {
+      padding: var(--m-3);
+    }
   }
 
   &-img {

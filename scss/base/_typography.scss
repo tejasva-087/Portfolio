@@ -16,6 +16,19 @@
     background-clip: text;
     background-size: 220%;
     background-position: 0;
+
+    text-align: center;
+    // 1100 PX
+    @media (max-width: 68.75em) {
+      font-size: var(--b-3);
+      line-height: 0.5;
+    }
+
+    // 310 px
+    @media (max-width: 19.375em) {
+      line-height: 1;
+      font-size: var(--b-1);
+    }
   }
 
   &-tertiary {
@@ -47,6 +60,11 @@
 
   &-big {
     font-size: var(--m-3);
+
+    // 310 px
+    @media (max-width: 19.375em) {
+      font-size: var(--m-1);
+    }
   }
 
   &-mid {

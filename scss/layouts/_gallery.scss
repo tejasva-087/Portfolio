@@ -3,6 +3,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--m-3);
+
+    // 500px
+    @media (max-width: 31.25em) {
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+      row-gap: var(--m-3);
+    }
   }
 
   &-img {

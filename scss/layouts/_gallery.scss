@@ -17,8 +17,8 @@
     width: 100%;
     transition: all 0.3s;
   }
+}
 
-  &-img-blur {
-    filter: blur(0.5rem);
-  }
+.lazy-img > .gallery-box img[data-src] {
+  filter: blur(0.5rem);
 }

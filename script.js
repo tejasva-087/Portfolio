@@ -253,7 +253,7 @@ const copyrightText = document.querySelector(".footer-copyright");
 const curentYear = new Date().getFullYear();
 
 copyrightText.innerHTML = `
-  <span> Copyright &copy; ${curentYear}</span>
+  <span> Copyright <i class="ph ph-copyright"></i> ${curentYear}</span>
   <a href="https://www.linkedin.com/in/tejasva-khandelwal/" class="link link-white-txt" target="_blank">Tejasva Khandelwal</a> 
   <span>All rights reserved.</span>
 `;
@@ -281,7 +281,7 @@ insertHTML("beforeend", navLinkHmtl, footerNavLinks);
 //////////////////////////////////
 
 //////////////////////////////////////////////////////////////////
-// CREATING AND INSERTING HTML (techstack icons)tabbed component
+// TABBED COMPONENT FUNCTIONALITY
 
 // FUNCTIONALITY implementing (event deligation)
 btnContainer.addEventListener("click", (e) => {
@@ -304,7 +304,7 @@ btnContainer.addEventListener("click", (e) => {
 });
 
 //////////////////////////////////////////////////////////////////
-// CREATING AND INSERTING HTML (techstack icons)tabbed component
+// SLIDER FUNCTIONALITY
 const sliderBox = document.getElementsByClassName("slider-box");
 const sliderBtnLeft = document.querySelector(".slider-btn--left");
 const sliderBtnRight = document.querySelector(".slider-btn--right");
@@ -360,31 +360,30 @@ allSection.forEach((section) => {
 //////////////////////////////
 // lazy loading
 
-const imgTargets = document.querySelectorAll("img[data-src]");
+const galleryImgBox = document.querySelector(".gallery-img-box");
+const galleryImg = document.querySelectorAll(".gallery-img");
 
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
+const loadImg = function (ent, observer) {
+  const [entry] = ent;
 
-  if (!entry.isIntersecting) return;
+  // changing the image paths
+  galleryImg.forEach((img) => (img.src = img.dataset.src));
 
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener("load", function (e) {
-    console.log(e);
-    entry.target.classList.remove("gallery-img-blur");
+  // Checking fot the load event
+  window.addEventListener("load", function () {
+    galleryImgBox.classList.remove("lazy-img");
   });
 
-  observer.unobserve(entry.target);
+  observer.unobserve(galleryImgBox);
 };
 
-const imgObserver = new IntersectionObserver(loadImg, {
+const galleryBoxObs = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0,
-  rootMargin: "200px",
+  rootMargin: "300px",
 });
 
-imgTargets.forEach((img) => imgObserver.observe(img));
+galleryBoxObs.observe(galleryImgBox);
 
 /////////////////////////
 // RESIZE EVENT

@@ -449,7 +449,7 @@ body {
   width: 100%;
   transition: all 0.3s; }
 
-.gallery-img-blur {
+.lazy-img > .gallery-box img[data-src] {
   filter: blur(0.5rem); }
 
 .footer {

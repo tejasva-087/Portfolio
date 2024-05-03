@@ -221,7 +221,7 @@ const projectDataHtml = data.projects.reduce((acc, val) => {
         ${val.description}
       </p>
       <div class="slider-box-tech-stack">
-        <p class="text-mid">Made using:</p>
+       
         ${val.techStack.reduce((acc, val) => {
           return (
             `<img src="/assets/icons/${val}.png" alt="${val}" class="icon-sml" />` +

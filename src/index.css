@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white-primary: #faf7f2;
+  --color-white-secondary: #d4d4d4;
+  --color-white-tertiary: #b3b3b3;
+
+  --color-black-primary: #0f0f0f;
+  --color-black-secondary: #1f1f1f;
+  --color-black-tertiary: #2e2e2e;
+
+  --color-primary-dark: #514fb0;
+  --color-primary: #7371fc;
+}
+
+.grid-background {
+  background-color: var(--color-white-primary);
+  opacity: 0.1;
+  background-image:
+    linear-gradient(var(--color-black-tertiary) 0.4px, transparent 0.4px),
+    linear-gradient(
+      to right,
+      var(--color-black-tertiary) 0.4px,
+      var(--color-white-primary) 0.4px
+    );
+  background-size: 8px 8px;
+  z-index: -1;
+}

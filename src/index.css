@@ -10,7 +10,13 @@
   --color-black-tertiary: #2e2e2e;
 
   --color-primary-dark: #514fb0;
-  --color-primary: #7371fc;
+  --color-primary: #704ee7;
+  --color-primary-light: #c4b0f8;
+
+  --color-secondary: #ffd35f;
+
+  --default-font-family: "Satoshi", sans-serif;
+  --font-elegant: "Stardom", sans-serif;
 }
 
 .grid-background {

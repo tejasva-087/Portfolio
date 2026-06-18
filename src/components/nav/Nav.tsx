@@ -6,7 +6,6 @@ import type { NavLink } from "./nav.types";
 
 export type { NavLink };
 
-// ─── bump breakpoint to lg (1024px) to give 5 links enough room ───────────────
 const MOBILE_BREAKPOINT = 1024;
 
 export const Nav = ({ links }: { links: NavLink[] }) => {
@@ -36,7 +35,6 @@ export const Nav = ({ links }: { links: NavLink[] }) => {
 
   return (
     <>
-      {/* Desktop — shown above lg breakpoint */}
       {!isMobile && (
         <nav className="flex items-center gap-6">
           {links.map((link) => (

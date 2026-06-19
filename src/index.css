@@ -21,6 +21,11 @@ html {
 
   --color-tertiary: #95d5b2;
 
+  --color-memorymap: #db2b61;
+  --color-trackify: #ff9b23;
+  --color-tinysiege: #d66565;
+  --color-rozgardhundo: #3b82f6;
+
   --default-font-family: "Satoshi", sans-serif;
   --font-elegant: "Stardom", sans-serif;
 }

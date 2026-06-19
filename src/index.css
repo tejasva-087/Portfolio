@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-white-primary: #faf7f2;
   --color-white-secondary: #d4d4d4;
@@ -14,6 +18,8 @@
   --color-primary-light: #c4b0f8;
 
   --color-secondary: #ffd35f;
+
+  --color-tertiary: #95d5b2;
 
   --default-font-family: "Satoshi", sans-serif;
   --font-elegant: "Stardom", sans-serif;

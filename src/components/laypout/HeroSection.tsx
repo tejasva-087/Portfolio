@@ -59,7 +59,11 @@ const STIFFNESS = 0.06;
 const DAMPING = 0.82;
 const MAX_DIST = 18;
 
-function HeroSection() {
+type HeroSectionProp = {
+  className?: string;
+};
+
+function HeroSection({ className }: HeroSectionProp) {
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
   const target = useRef({ x: 0, y: 0 });
   const springs = useRef(ICONS.map(() => ({ cx: 0, cy: 0, vx: 0, vy: 0 })));
@@ -117,7 +121,9 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-0 md:min-h-[75vh] flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-8 px-4 py-12 md:py-16 text-center overflow-hidden">
+    <section
+      className={`relative w-full min-h-0 md:min-h-[85vh] flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-8 px-4 py-12 md:py-16 text-center overflow-hidden ${className}`}
+    >
       {/* Hero text */}
       <h1
         className="flex flex-col gap-1 z-10

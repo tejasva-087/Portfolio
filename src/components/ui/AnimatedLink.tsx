@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 interface AnimatedLinkProps {
   href: string;
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   className?: string;
 }
 

@@ -12,6 +12,7 @@ import cssImage from "../../assets/css.svg";
 import nodeImage from "../../assets/node.svg";
 import expressImage from "../../assets/express.svg";
 import drizzleImage from "../../assets/drizzle.svg";
+import gitImage from "../../assets/git.svg";
 import zodImage from "../../assets/zod.webp";
 import mongodbImage from "../../assets/mongodb.png";
 import postgresqlImage from "../../assets/postgresql.svg";
@@ -78,6 +79,7 @@ function Skills() {
           skills={[
             { name: "Drizzle", icon: drizzleImage },
             { name: "Zod", icon: zodImage },
+            { name: "git", icon: gitImage },
           ]}
         />
         <SkillBox

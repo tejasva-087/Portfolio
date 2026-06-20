@@ -37,7 +37,7 @@ function ProjectLinks({ projects }: ProjectLinksProps) {
         <a
           key={project.title}
           href={project.href}
-          target="_blank"
+          target={project.status === "wip" ? "" : "_black"}
           rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(i, e)}
           onMouseLeave={() => setHovered(null)}

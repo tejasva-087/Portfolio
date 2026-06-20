@@ -10,7 +10,7 @@ function AboutMe() {
         About me
       </h2>
 
-      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mb-12 md:mb-20">
+      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mb-12">
         {/* Text side */}
         <div className="flex-1">
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-medium flex flex-col mb-8 leading-tight">

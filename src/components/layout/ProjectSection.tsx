@@ -20,7 +20,7 @@ function ProjectSection() {
           },
           {
             title: "Trackify",
-            description: "Manage your money efficiently. (WORK IN PROGRESS)",
+            description: "Manage your time efficiently. (WORK IN PROGRESS)",
             href: "/",
             status: "wip",
             color: "var(--color-trackify)",

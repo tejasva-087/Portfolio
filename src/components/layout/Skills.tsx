@@ -36,7 +36,7 @@ function Skills() {
       <div className="flex flex-wrap gap-4 items-center justify-center">
         <SkillBox
           title="Languages"
-          color="var(--color-primary)"
+          color="var(--color-languages)"
           skills={[
             { name: "Javascript", icon: jsImage },
             { name: "Typescript", icon: tsImage },
@@ -47,7 +47,7 @@ function Skills() {
         />
         <SkillBox
           title="Frontend"
-          color="var(--color-primary)"
+          color="var(--color-frontend)"
           skills={[
             { name: "React", icon: reactImage },
             { name: "Next", icon: nextImage },
@@ -58,7 +58,7 @@ function Skills() {
         />
         <SkillBox
           title="Backend"
-          color="var(--color-primary)"
+          color="var(--color-backend)"
           skills={[
             { name: "Node.js", icon: nodeImage },
             { name: "Express", icon: expressImage },
@@ -66,7 +66,7 @@ function Skills() {
         />
         <SkillBox
           title="Database"
-          color="var(--color-primary)"
+          color="var(--color-database)"
           skills={[
             { name: "MongoDB", icon: mongodbImage },
             { name: "postgreSQL", icon: postgresqlImage },
@@ -75,7 +75,7 @@ function Skills() {
         />
         <SkillBox
           title="Libraries & Tools"
-          color="var(--color-primary)"
+          color="var(--color-libraries)"
           skills={[
             { name: "Drizzle", icon: drizzleImage },
             { name: "Zod", icon: zodImage },
@@ -84,7 +84,7 @@ function Skills() {
         />
         <SkillBox
           title="Design & UI/UX"
-          color="var(--color-primary)"
+          color="var(--color-design)"
           skills={[
             { name: "Figma", icon: figmaImage },
             { name: "Affinity", icon: affinityImage },
@@ -93,7 +93,7 @@ function Skills() {
         />
         <SkillBox
           title="Game development"
-          color="var(--color-primary)"
+          color="var(--color-game)"
           skills={[
             { name: "Godot", icon: godotImage },
             { name: "Libresprite", icon: librespriteImage },

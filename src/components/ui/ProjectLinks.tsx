@@ -47,7 +47,7 @@ function ProjectLinks({ projects }: ProjectLinksProps) {
           <div className="flex items-center justify-between relative z-10">
             <div className="flex flex-col items-baseline gap-2">
               <span
-                className="text-3xl md:text-5xl font-bold tracking-tight"
+                className="text-2xl sm:text-3xl  md:text-5xl font-bold tracking-tight"
                 style={{ color: project.color }}
               >
                 {project.title}
@@ -59,7 +59,7 @@ function ProjectLinks({ projects }: ProjectLinksProps) {
             </div>
 
             <div
-              className="shrink-0 relative w-12 h-12 rounded-full border md:flex items-center justify-center overflow-hidden hidden"
+              className="shrink-0 relative sm:w-12 sm:h-12 w-8 h-8 rounded-full border flex items-center justify-center overflow-hidden"
               style={{ borderColor: project.color }}
             >
               <motion.div
@@ -102,7 +102,7 @@ function ProjectLinks({ projects }: ProjectLinksProps) {
                   opacity: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
                   scale: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
                 }}
-                className="pointer-events-none absolute top-0 left-0 z-20 w-18 h-18 rounded-full flex flex-col items-center justify-center text-center"
+                className="pointer-events-none absolute top-0 left-0 z-20 w-18 h-18 rounded-full flex-col items-center justify-center text-center hidden sm:flex"
                 style={{
                   backgroundColor: project.color,
                 }}

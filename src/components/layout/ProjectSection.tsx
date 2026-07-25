@@ -13,29 +13,28 @@ function ProjectSection() {
         projects={[
           {
             title: "Memory map",
-            description: "A digital travel journal. (BETA VERSION)",
+            description: "A digital travel journal.",
             href: "https://memorymap.space",
             status: "live",
             color: "var(--color-memorymap)",
           },
           {
             title: "Trackify",
-            description: "Manage your time efficiently. (WORK IN PROGRESS)",
+            description: "Manage your time efficiently.",
             href: "/",
             status: "wip",
             color: "var(--color-trackify)",
           },
           {
             title: "Tiny siege",
-            description:
-              "A strategy based tower defense game. (WORK IN PROGRESS)",
+            description: "A strategy based tower defense game.",
             href: "/",
             status: "wip",
             color: "var(--color-tinysiege)",
           },
           {
             title: "rozgardhundo.com",
-            description: "Connecting people to local jobs. (WORK IN PROGRESS)",
+            description: "Connecting people to local jobs.",
             href: "/",
             status: "wip",
             color: "var(--color-rozgardhundo)",

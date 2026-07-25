@@ -26,6 +26,14 @@ html {
   --color-tinysiege: #d66565;
   --color-rozgardhundo: #3b82f6;
 
+  --color-languages: #ffc106;
+  --color-frontend: #00acc1;
+  --color-backend: #7fb800;
+  --color-database: #0177bd;
+  --color-libraries: #f4511e;
+  --color-design: #7d4dff;
+  --color-game: #478cbf;
+
   --default-font-family: "Satoshi", sans-serif;
   --font-elegant: "Stardom", sans-serif;
 }

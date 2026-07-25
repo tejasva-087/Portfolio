@@ -42,7 +42,7 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <div
-      className="rounded-2xl p-6 shrink-0 flex flex-col h-full min-h-[340px]"
+      className="rounded-2xl sm:p-6 shrink-0 flex flex-col h-full min-h-85 p-4"
       style={{ backgroundColor: color }}
     >
       <div className="flex items-center justify-between mb-6">

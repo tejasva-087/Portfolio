@@ -14,30 +14,36 @@ function ProjectSection() {
           {
             title: "Memory map",
             description: "A digital travel journal.",
-            href: "https://memorymap.space",
-            status: "live",
+            to: "/memory-map",
+
             color: "var(--color-memorymap)",
           },
           {
             title: "Trackify",
             description: "Manage your time efficiently.",
-            href: "/",
-            status: "wip",
+            to: "/trackify",
+
             color: "var(--color-trackify)",
           },
           {
-            title: "Tiny siege",
-            description: "A strategy based tower defense game.",
-            href: "/",
-            status: "wip",
-            color: "var(--color-tinysiege)",
+            title: "E-commerce store",
+            description: "A clothing brand.",
+            to: "/tri-ink",
+
+            color: "var(--color-triink)",
           },
           {
             title: "rozgardhundo.com",
             description: "Connecting people to local jobs.",
-            href: "/",
-            status: "wip",
+            to: "/rozgar-dhundo",
+
             color: "var(--color-rozgardhundo)",
+          },
+          {
+            title: "Tiny siege",
+            description: "A strategy based strategy game.",
+            to: "/tri-ink",
+            color: "var(--color-tinysiege)",
           },
         ]}
       />

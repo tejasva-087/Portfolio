@@ -20,7 +20,10 @@ export function SkillBox({ title, color, skills }: SkillBoxProps) {
       </h4>
       <ul className="flex sm:flex-wrap justify-center items-center gap-6">
         {skills.map((skill) => (
-          <li className="basis-12 flex flex-col items-center min-w-0">
+          <li
+            className="basis-12 flex flex-col items-center min-w-0"
+            key={skill.name}
+          >
             <img src={skill.icon} alt="" className="w-12" />
             <p className="truncate text-xs sm:text-sm">{skill.name}</p>
           </li>

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export interface Project {
   title: string;
   description: string;
-  href: string;
-  status?: "live" | "wip";
+  to: string;
   color: string;
 }
 
@@ -34,10 +34,9 @@ function ProjectLinks({ projects }: ProjectLinksProps) {
   return (
     <div className="w-full">
       {projects.map((project, i) => (
-        <a
+        <Link
           key={project.title}
-          href={project.href}
-          target={project.status === "wip" ? "" : "_black"}
+          to={project.to}
           rel="noopener noreferrer"
           onMouseEnter={(e) => handleMouseEnter(i, e)}
           onMouseLeave={() => setHovered(null)}
@@ -107,22 +106,14 @@ function ProjectLinks({ projects }: ProjectLinksProps) {
                   backgroundColor: project.color,
                 }}
               >
-                {project.status === "wip" ? (
-                  <span className="text-[10px] font-bold uppercase tracking-wide text-black-primary leading-tight">
-                    Work in
-                    <br />
-                    progress
-                  </span>
-                ) : (
-                  <span className="text-[10px] font-bold uppercase tracking-wide text-white-primary leading-tight px-1 wrap-break-word">
-                    visit
-                    <br /> site
-                  </span>
-                )}
+                <span className="text-[10px] font-bold uppercase tracking-wide text-white-primary leading-tight px-1 wrap-break-word">
+                  View
+                  <br /> more
+                </span>
               </motion.div>
             )}
           </AnimatePresence>
-        </a>
+        </Link>
       ))}
     </div>
   );

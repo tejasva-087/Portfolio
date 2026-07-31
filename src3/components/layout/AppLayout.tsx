@@ -5,6 +5,7 @@ import { Nav } from "../nav/Nav";
 import Logo from "../ui/Logo";
 import resumepdf from "../../assets/Tejasav Khandelwal_Resume.pdf";
 import { ScrollToHash } from "../ui/ScrollToHash";
+import Footer from "./Footer";
 
 const links: NavLink[] = [
   { label: "About me", href: "/#about-me" },
@@ -24,6 +25,13 @@ function AppLayout() {
         <Nav links={links} />
       </header>
       <Outlet />
+      <Footer
+        email="tejasva.khandelwal2009@gmail.com"
+        github="https://github.com/tejasva-087"
+        linkedin="https://www.linkedin.com/in/tejasavkhandelwal/"
+        instagram="https://www.instagram.com/tejuss.official/"
+        location="Indore, IN"
+      />
     </div>
   );
 }

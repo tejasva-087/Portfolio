@@ -5,9 +5,9 @@ html {
 }
 
 @theme {
-  --color-white-primary: #ffffff;
-  --color-white-secondary: #f2f2f2;
-  --color-white-tertiary: #e6e6e6;
+  --color-white-primary: #faf7f2;
+  --color-white-secondary: #d4d4d4;
+  --color-white-tertiary: #b3b3b3;
 
   --color-black-primary: #0f0f0f;
   --color-black-secondary: #1f1f1f;
@@ -37,8 +37,6 @@ html {
 
   --default-font-family: "Satoshi", sans-serif;
   --font-elegant: "Stardom", sans-serif;
-
-  --breakpoint-md: 800px;
 }
 
 .grid-background {
@@ -53,4 +51,32 @@ html {
     );
   background-size: 8px 8px;
   z-index: -1;
+}
+
+.always-scroll {
+  overflow-x: scroll; /* Forces horizontal scrollbar space */
+  scrollbar-width: thin; /* For modern Firefox standard */
+}
+
+/* 2. WebKit Override (Forces visibility on macOS, iOS, Safari, Chrome, and Edge) */
+.always-scroll::-webkit-scrollbar {
+  -webkit-appearance: none; /* Disables OS default overlay behavior */
+  width: 8px; /* Width of vertical scrollbar */
+  height: 8px; /* Height of horizontal scrollbar */
+}
+
+/* 3. Track Styling (The background of the scrollbar) */
+.always-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Visible background color */
+}
+
+/* 4. Thumb Styling (The draggable scroll bar handle) */
+.always-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* Visible thumb color */
+  border-radius: 4px; /* Adds rounded corners */
+}
+
+/* 5. Hover state to make it interactive */
+.always-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

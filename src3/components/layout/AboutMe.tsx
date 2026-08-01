@@ -1,5 +1,3 @@
-import heroImage from "../../assets/heroImage.png";
-
 function AboutMe() {
   return (
     <section

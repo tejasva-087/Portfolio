@@ -1,3 +1,5 @@
+import { getDuration } from "../utils/helpers";
+
 interface ExperienceCardProps {
   company: string;
   title: string;
@@ -19,12 +21,12 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <div
-      className="rounded-2xl sm:p-6 shrink-0 flex flex-col h-full min-h-85 p-4"
+      className="rounded-2xl sm:p-6 shrink-0 flex flex-col h-full min-h-85 w-70 sm:w-90 p-4"
       style={{ backgroundColor: color }}
     >
       <div className="flex items-center justify-between mb-6">
         <span
-          className="font-bold text-base md:text-lg tracking-tight"
+          className="font-bold text-sm md:text-lg tracking-tight"
           style={{ color: textColor }}
         >
           {company}

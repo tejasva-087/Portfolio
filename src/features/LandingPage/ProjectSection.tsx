@@ -25,19 +25,19 @@ const PROJECT_DETAILS = [
 
     color: "var(--color-rozgardhundo)",
   },
-  {
-    title: "E-commerce store",
-    description: "A clothing brand.",
-    to: "/tri-ink",
+  // {
+  //   title: "E-commerce store",
+  //   description: "A clothing brand.",
+  //   to: "/tri-ink",
 
-    color: "var(--color-triink)",
-  },
-  {
-    title: "Tiny siege",
-    description: "A strategy based strategy game.",
-    to: "/tri-ink",
-    color: "var(--color-tinysiege)",
-  },
+  //   color: "var(--color-triink)",
+  // },
+  // {
+  //   title: "Tiny siege",
+  //   description: "A strategy based strategy game.",
+  //   to: "/tiny-siege",
+  //   color: "var(--color-tinysiege)",
+  // },
 ];
 
 function ProjectSection() {

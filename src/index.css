@@ -43,14 +43,10 @@ html {
 
 .grid-background {
   background-color: var(--color-white-primary);
-  opacity: 0.1;
   background-image:
-    linear-gradient(var(--color-black-tertiary) 0.4px, transparent 0.4px),
-    linear-gradient(
-      to right,
-      var(--color-black-tertiary) 0.4px,
-      var(--color-white-primary) 0.4px
-    );
+    linear-gradient(var(--color-black-tertiary) 1px, transparent 1px),
+    linear-gradient(to right, var(--color-black-tertiary) 1px, transparent 1px);
   background-size: 8px 8px;
+  opacity: 0.05;
   z-index: -1;
 }

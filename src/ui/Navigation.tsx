@@ -40,6 +40,7 @@ function Navigation({ navLinks }: NavigationProps) {
                   target=""
                   className="text-2xl md:text-base tracking-widest uppercase"
                   color="black-primary"
+                  onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </AnimatedLink>

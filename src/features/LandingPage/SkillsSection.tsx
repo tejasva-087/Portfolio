@@ -97,7 +97,7 @@ const STACK_DETAIL = [
 function SkillsSection() {
   return (
     <Section id="skills-section">
-      <Heading type="SectionHeading"> My Expertise</Heading>
+      <Heading type="sectionHeading"> My Expertise</Heading>
 
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {STACK_DETAIL.map((details, i) => {

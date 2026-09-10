@@ -27,9 +27,6 @@ function Carousel({ children, gap = 16, className = "" }: CarouselProps) {
     const el = scrollRef.current;
     if (!el) return;
 
-    // temporarily measure natural content width by checking scrollWidth
-    // against clientWidth — note: when items are flex-1 this always reads
-    // as "fits", so we check overflow using the items' natural width first
     const overflow = el.scrollWidth > el.clientWidth + 1;
     setNeedsScroll(overflow);
     setCanScrollLeft(el.scrollLeft > 2);
@@ -66,7 +63,6 @@ function Carousel({ children, gap = 16, className = "" }: CarouselProps) {
     isDragging.current = true;
     startX.current = e.pageX;
     scrollLeftStart.current = el.scrollLeft;
-    el.style.cursor = "grabbing";
     el.style.scrollSnapType = "none";
   };
 
@@ -82,7 +78,6 @@ function Carousel({ children, gap = 16, className = "" }: CarouselProps) {
     const el = scrollRef.current;
     if (!el) return;
     isDragging.current = false;
-    el.style.cursor = needsScroll ? "grab" : "default";
     el.style.scrollSnapType = "";
   };
 
@@ -95,7 +90,7 @@ function Carousel({ children, gap = 16, className = "" }: CarouselProps) {
         onMouseUp={endDrag}
         onMouseLeave={endDrag}
         className={`flex overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
-          needsScroll ? "cursor-grab" : ""
+          needsScroll ? "cursor-ew-resize" : ""
         }`}
         style={{ gap: `${gap}px`, scrollSnapType: "x mandatory" }}
       >

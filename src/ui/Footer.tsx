@@ -14,7 +14,7 @@ export function Footer({
   location,
 }: FooterProps) {
   return (
-    <footer className="px-6 py-6 sm:py-8 md:px-6 md:py-10 max-w-6xl mx-auto border-t border-black-tertiary mt-12">
+    <footer className="px-6 py-6 sm:py-8 md:px-6 md:py-10 mx-auto border-t border-black-tertiary mt-12 w-full">
       <a
         href={`mailto:${email}`}
         className="block text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight break-all sm:break-normal text-primary transition-colors duration-200 mb-6 sm:mb-8 md:mb-10"

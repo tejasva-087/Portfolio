@@ -4,12 +4,13 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 import resumePdf from "../assets/resume.pdf";
+import { ScrollToHash } from "./ScrollToHash";
 
 const navLinks = [
-  { label: "About me", to: "/#about-me" },
-  { label: "Skills", to: "/#skills" },
-  { label: "Projects", to: "/#projects" },
-  { label: "Experience", to: "/#experience" },
+  { label: "About me", to: "/#about-me-section" },
+  { label: "Skills", to: "/#skills-section" },
+  { label: "Projects", to: "/#projects-section" },
+  { label: "Experience", to: "/#experience-section" },
   { label: "Contact me", to: "mailto:tejasva.khandelwal2009@gmail.com" },
   { label: "Resume", to: resumePdf },
 ];
@@ -17,6 +18,7 @@ const navLinks = [
 function AppLayout() {
   return (
     <div className="max-w-350 m-auto">
+      <ScrollToHash />
       <Navigation navLinks={navLinks} />
       <Outlet />
       <Footer

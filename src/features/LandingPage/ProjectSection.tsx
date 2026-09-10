@@ -17,19 +17,20 @@ const PROJECT_DETAILS = [
 
     color: "var(--color-trackify)",
   },
-  {
-    title: "E-commerce store",
-    description: "A clothing brand.",
-    to: "/tri-ink",
 
-    color: "var(--color-triink)",
-  },
   {
     title: "rozgardhundo.com",
     description: "Connecting people to local jobs.",
     to: "/rozgar-dhundo",
 
     color: "var(--color-rozgardhundo)",
+  },
+  {
+    title: "E-commerce store",
+    description: "A clothing brand.",
+    to: "/tri-ink",
+
+    color: "var(--color-triink)",
   },
   {
     title: "Tiny siege",
@@ -42,7 +43,7 @@ const PROJECT_DETAILS = [
 function ProjectSection() {
   return (
     <Section id="projects-section">
-      <Heading type="SectionHeading">Projects</Heading>
+      <Heading type="sectionHeading">Projects</Heading>
 
       <ProjectLinks projects={PROJECT_DETAILS} />
     </Section>

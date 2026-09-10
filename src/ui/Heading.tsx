@@ -3,7 +3,7 @@ import type { ReactElement, ReactNode } from "react";
 type HeadingProps = {
   className?: string;
   children: string | ReactNode | ReactElement;
-  type?: "h1" | "h2" | "h3" | "SectionHeading";
+  type?: "h1" | "h2" | "h3" | "sectionHeading" | "h5";
 };
 
 function Heading({ children, className = "", type = "h1" }: HeadingProps) {
@@ -25,13 +25,20 @@ function Heading({ children, className = "", type = "h1" }: HeadingProps) {
       </h3>
     );
 
-  if (type === "SectionHeading")
+  if (type === "sectionHeading")
     return (
       <h4
         className={`text-2xl md:text-3xl mb-10 md:mb-16 uppercase text-primary text-center underline underline-offset-4 tracking-widest ${className}`}
       >
         {children}
       </h4>
+    );
+
+  if (type === "h5")
+    return (
+      <h5 className={`text-2xl md:text-3xl font-medium ${className}`}>
+        {children}
+      </h5>
     );
 
   return (

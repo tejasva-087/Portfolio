@@ -5,9 +5,9 @@ import Carousel from "../../ui/Carousel";
 
 const EXPERIENCE_DETAILS = [
   {
-    company: "iHeath and Wellness Foundation",
-    title: "Principal Full Stack Engineer",
-    skills: ["MERN Stack", "CSS Modules", "Git Submodules"],
+    company: "Triink MNS",
+    title: "Freelance Full Stack Engineer",
+    skills: ["MERN Stack", "Figma", "E-commerce"],
     startDate: "Aug 2026",
     color: "var(--color-primary)",
     textColor: "var(--color-white-primary)",
@@ -50,7 +50,7 @@ const EXPERIENCE_DETAILS = [
 function ExperienceSection() {
   return (
     <Section id="experience-section">
-      <Heading type="SectionHeading">Experience</Heading>
+      <Heading type="sectionHeading">Experience</Heading>
       <Carousel gap={16}>
         {EXPERIENCE_DETAILS.map((detail, i) => {
           return (

@@ -1,4 +1,5 @@
 import Heading from "../../ui/Heading";
+import Text from "../../ui/Text";
 import HighlightedText from "../../ui/HighlightedText";
 import Section from "../../ui/Section";
 
@@ -7,8 +8,8 @@ import Blockquote from "../../ui/Blockquote";
 
 function AboutMeSection() {
   return (
-    <Section id="about-me-section">
-      <Heading type="SectionHeading">About Me</Heading>
+    <Section id="about-me-section" className="max-w-6xl mx-auto">
+      <Heading type="sectionHeading">About Me</Heading>
 
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mb-12">
         {/* Text */}
@@ -25,7 +26,7 @@ function AboutMeSection() {
           </Heading>
 
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed text-black-secondary">
+          <Text>
             <HighlightedText color="var(--color-secondary)">
               Fullstack dev
             </HighlightedText>
@@ -42,7 +43,7 @@ function AboutMeSection() {
             staring at a screen, I'm out exploring nature and wildlife — because
             sometimes the best debugging happens away from the keyboard.
             Energetic by default, caffeinated by necessity.
-          </p>
+          </Text>
         </div>
 
         {/* Image */}
